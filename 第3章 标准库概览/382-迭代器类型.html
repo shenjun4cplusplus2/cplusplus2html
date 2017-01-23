@@ -1,0 +1,8564 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-cn" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.8.2 迭代器类型 · C++程序设计语言</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="383-迭代器和io.html" />
+    
+    
+    <link rel="prev" href="381-迭代器的使用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1.md">
+            
+                <span>
+            
+                    
+                    First Chapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../第1章 致读者/第1章 致读者.html">
+            
+                <a href="../第1章 致读者/第1章 致读者.html">
+            
+                    
+                    第1章 致读者
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../第1章 致读者/11-本书的结构.html">
+            
+                <a href="../第1章 致读者/11-本书的结构.html">
+            
+                    
+                    1.1 本书的结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" >
+            
+                <span>
+            
+                    
+                    1.1.1 例子和参考
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" >
+            
+                <span>
+            
+                    
+                    1.1.2 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" >
+            
+                <span>
+            
+                    
+                    1.1.3 有关实现的注记
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    1.2 学习C++
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    1.3 C++ 的设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" >
+            
+                <span>
+            
+                    
+                    1.3.1 效率和结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" >
+            
+                <span>
+            
+                    
+                    1.3.2 哲学注记
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    1.4 历史注记
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    1.5 C++ 的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    1.6 C和C++
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" >
+            
+                <span>
+            
+                    
+                    1.6.1 给C程序员的建议
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" >
+            
+                <span>
+            
+                    
+                    1.6.2 给C++程序员的建议
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" >
+            
+                <span>
+            
+                    
+                    1.7 有关在C++里编程的思考
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" >
+            
+                <span>
+            
+                    
+                    1.8 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" >
+            
+                <span>
+            
+                    
+                    1.9 参考文献
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../第2章 C++概览/第2章 C++概览.html">
+            
+                <a href="../第2章 C++概览/第2章 C++概览.html">
+            
+                    
+                    第2章 C++概览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    2.1 为什么是C++
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    2.2 程序设计范型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    2.3 过程式程序设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" >
+            
+                <span>
+            
+                    
+                    2.3.1 变量和算术
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" >
+            
+                <span>
+            
+                    
+                    2.3.2 检测和循环
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" >
+            
+                <span>
+            
+                    
+                    2.3.3 指针和数组
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    2.4 模块程序设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" >
+            
+                <span>
+            
+                    
+                    2.4.1 分别编译
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" >
+            
+                <span>
+            
+                    
+                    2.4.2 异常处理
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    2.5 数据抽象
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" >
+            
+                <span>
+            
+                    
+                    2.5.1 定义类型的模块
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" >
+            
+                <span>
+            
+                    
+                    2.5.2 用户定义类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" >
+            
+                <span>
+            
+                    
+                    2.5.3 具体类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" >
+            
+                <span>
+            
+                    
+                    2.5.4 抽象类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" >
+            
+                <span>
+            
+                    
+                    2.5.5 虚函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    2.6 面向对象的程序设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" >
+            
+                <span>
+            
+                    
+                    2.6.1 具体类型的问题
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" >
+            
+                <span>
+            
+                    
+                    2.6.2 类层次结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    2.7 通用型程序设计
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" >
+            
+                <span>
+            
+                    
+                    2.8 附言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" >
+            
+                <span>
+            
+                    
+                    2.9 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="第3章 标准库概览.html">
+            
+                <a href="第3章 标准库概览.html">
+            
+                    
+                    第3章 标准库概览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    3.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    3.2 Hello, World!
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    3.3 标准库名字空间
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    3.4 输出
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    3.5 字符串
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" >
+            
+                <span>
+            
+                    
+                    3.5.1 C风格的字符串
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    3.6 输入
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" >
+            
+                <span>
+            
+                    
+                    3.7 容器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.7.1" >
+            
+                <span>
+            
+                    
+                    3.7.1 向量---vector
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.2" >
+            
+                <span>
+            
+                    
+                    3.7.2 范围检查
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.3" >
+            
+                <span>
+            
+                    
+                    3.7.3 表---list
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.4" data-path="374-映射---map.html">
+            
+                <a href="374-映射---map.html">
+            
+                    
+                    3.7.4 映射---map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.5" data-path="375-标准容器.html">
+            
+                <a href="375-标准容器.html">
+            
+                    
+                    3.7.5 标准容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="38-算法.html">
+            
+                <a href="38-算法.html">
+            
+                    
+                    3.8 算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="381-迭代器的使用.html">
+            
+                <a href="381-迭代器的使用.html">
+            
+                    
+                    3.8.1 迭代器的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.8.2" data-path="382-迭代器类型.html">
+            
+                <a href="382-迭代器类型.html">
+            
+                    
+                    3.8.2 迭代器类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.3" data-path="383-迭代器和io.html">
+            
+                <a href="383-迭代器和io.html">
+            
+                    
+                    3.8.3 迭代器和I\/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.4" data-path="384-遍历和谓词.html">
+            
+                <a href="384-遍历和谓词.html">
+            
+                    
+                    3.8.4 遍历和谓词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.5" data-path="385-使用成员函数的算法.html">
+            
+                <a href="385-使用成员函数的算法.html">
+            
+                    
+                    3.8.5 使用成员函数的算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.6" data-path="386-标准库算法.html">
+            
+                <a href="386-标准库算法.html">
+            
+                    
+                    3.8.6 标准库算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="39-数学.html">
+            
+                <a href="39-数学.html">
+            
+                    
+                    3.9 数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.9.1" data-path="391-复数.html">
+            
+                <a href="391-复数.html">
+            
+                    
+                    3.9.1 复数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.2" data-path="392-向量算术.html">
+            
+                <a href="392-向量算术.html">
+            
+                    
+                    3.9.2 向量算术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.3" data-path="393-基本数值支持.html">
+            
+                <a href="393-基本数值支持.html">
+            
+                    
+                    3.9.3 基本数值支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="310-标准库功能.html">
+            
+                <a href="310-标准库功能.html">
+            
+                    
+                    3.10 标准库功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" >
+            
+                <span>
+            
+                    
+                    3.11 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../第4章 类型和声明/第4章 类型和声明.html">
+            
+                <a href="../第4章 类型和声明/第4章 类型和声明.html">
+            
+                    
+                    第4章 类型和声明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    4.1 类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" >
+            
+                <span>
+            
+                    
+                    4.1.1 基本类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    4.2 布尔量
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    4.3 字符类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" >
+            
+                <span>
+            
+                    
+                    4.3.1 字符文字量
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" >
+            
+                <span>
+            
+                    
+                    4.4 整数类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" >
+            
+                <span>
+            
+                    
+                    4.4.1 整数文字量
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" >
+            
+                <span>
+            
+                    
+                    4.5 浮点类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.1" >
+            
+                <span>
+            
+                    
+                    4.5.1 浮点文字量
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" >
+            
+                <span>
+            
+                    
+                    4.6 大小
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" >
+            
+                <span>
+            
+                    
+                    4.7 void
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" >
+            
+                <span>
+            
+                    
+                    4.8 枚举
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" >
+            
+                <span>
+            
+                    
+                    4.9 声明
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.9.1" >
+            
+                <span>
+            
+                    
+                    4.9.1 声明的结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.2" >
+            
+                <span>
+            
+                    
+                    4.9.2 声明多个名字
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.3" >
+            
+                <span>
+            
+                    
+                    4.9.3 名字
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.4" >
+            
+                <span>
+            
+                    
+                    4.9.4 作用域
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.5" >
+            
+                <span>
+            
+                    
+                    4.9.5 初始化
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.6" >
+            
+                <span>
+            
+                    
+                    4.9.6 对象和左值
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.7" >
+            
+                <span>
+            
+                    
+                    4.9.7 typedef
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" >
+            
+                <span>
+            
+                    
+                    4.10 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" >
+            
+                <span>
+            
+                    
+                    4.11 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第5章 指针、数组和结构/第5章 指针、数组和结构.html">
+            
+                <a href="../第5章 指针、数组和结构/第5章 指针、数组和结构.html">
+            
+                    
+                    第5章 指针、数组和结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    5.1 指针
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" >
+            
+                <span>
+            
+                    
+                    5.1.1 零
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" >
+            
+                <span>
+            
+                    
+                    5.2 数组
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" >
+            
+                <span>
+            
+                    
+                    5.2.1 数组初始化
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" >
+            
+                <span>
+            
+                    
+                    5.2.2 字符串文字量
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
+            
+                <span>
+            
+                    
+                    5.3 到数组的指针
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" >
+            
+                <span>
+            
+                    
+                    5.3.1 在数组里漫游
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" >
+            
+                <span>
+            
+                    
+                    5.4 常量
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" >
+            
+                <span>
+            
+                    
+                    5.4.1 指针和常量
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" >
+            
+                <span>
+            
+                    
+                    5.5 引用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" >
+            
+                <span>
+            
+                    
+                    5.6 指向void的指针
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" >
+            
+                <span>
+            
+                    
+                    5.7 结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.7.1" >
+            
+                <span>
+            
+                    
+                    5.7.1 类型等价
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" >
+            
+                <span>
+            
+                    
+                    5.8 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" >
+            
+                <span>
+            
+                    
+                    5.9 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../第6章 表达式和语句/第6章 表达式和语句.html">
+            
+                <a href="../第6章 表达式和语句/第6章 表达式和语句.html">
+            
+                    
+                    第6章 表达式和语句
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    6.1 一个桌面计算器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" >
+            
+                <span>
+            
+                    
+                    6.1.1 分析器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" >
+            
+                <span>
+            
+                    
+                    6.1.2 输入函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" >
+            
+                <span>
+            
+                    
+                    6.1.3 低级输入
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" >
+            
+                <span>
+            
+                    
+                    6.1.4 错误处理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.5" >
+            
+                <span>
+            
+                    
+                    6.1.5 驱动程序
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.6" >
+            
+                <span>
+            
+                    
+                    6.1.6 头文件
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.7" >
+            
+                <span>
+            
+                    
+                    6.1.7 命令行参数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.8" >
+            
+                <span>
+            
+                    
+                    6.1.8 有关风格的注记
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../第6章 表达式和语句/62-运算符概览.html">
+            
+                <a href="../第6章 表达式和语句/62-运算符概览.html">
+            
+                    
+                    6.2 运算符概览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.2.1" >
+            
+                <span>
+            
+                    
+                    6.2.1 结果
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.2" >
+            
+                <span>
+            
+                    
+                    6.2.2 求值顺序
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.3" >
+            
+                <span>
+            
+                    
+                    6.2.3 运算符优先级
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.4" >
+            
+                <span>
+            
+                    
+                    6.2.4 按位逻辑运算符
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.5" >
+            
+                <span>
+            
+                    
+                    6.2.5 增量和减量
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.6" >
+            
+                <span>
+            
+                    
+                    6.2.6 自由存储
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.7" >
+            
+                <span>
+            
+                    
+                    6.2.7 显式类型转换
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2.8" >
+            
+                <span>
+            
+                    
+                    6.2.8 构造函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" >
+            
+                <span>
+            
+                    
+                    6.3 语句概览
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" >
+            
+                <span>
+            
+                    
+                    6.3.1 声明作为语句
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" >
+            
+                <span>
+            
+                    
+                    6.3.2 选择语句
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" >
+            
+                <span>
+            
+                    
+                    6.3.3 迭代语句
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" >
+            
+                <span>
+            
+                    
+                    6.3.4 goto
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" >
+            
+                <span>
+            
+                    
+                    6.4 注释和缩进编排
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" >
+            
+                <span>
+            
+                    
+                    6.5 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" >
+            
+                <span>
+            
+                    
+                    6.6 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../第7章 函数/第7章 函数.html">
+            
+                <a href="../第7章 函数/第7章 函数.html">
+            
+                    
+                    第7章 函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" >
+            
+                <span>
+            
+                    
+                    7.1 函数声明
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" >
+            
+                <span>
+            
+                    
+                    7.1.1 函数定义
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" >
+            
+                <span>
+            
+                    
+                    7.1.2 静态变量
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" >
+            
+                <span>
+            
+                    
+                    7.2 参数传递
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" >
+            
+                <span>
+            
+                    
+                    7.2.1 数组参数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" >
+            
+                <span>
+            
+                    
+                    7.3 返回值
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" >
+            
+                <span>
+            
+                    
+                    7.4 重载函数名
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" >
+            
+                <span>
+            
+                    
+                    7.4.1 重载和返回类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.2" >
+            
+                <span>
+            
+                    
+                    7.4.2 重载与作用域
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.3" >
+            
+                <span>
+            
+                    
+                    7.4.3 手工的歧义性解析
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.4" >
+            
+                <span>
+            
+                    
+                    7.4.4 多参数的解析
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" >
+            
+                <span>
+            
+                    
+                    7.5 默认参数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" >
+            
+                <span>
+            
+                    
+                    7.6 未确定数目的参数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" >
+            
+                <span>
+            
+                    
+                    7.7 指向函数的指针
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" >
+            
+                <span>
+            
+                    
+                    7.8 宏
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.8.1" >
+            
+                <span>
+            
+                    
+                    7.8.1 条件编译
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" >
+            
+                <span>
+            
+                    
+                    7.9 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" >
+            
+                <span>
+            
+                    
+                    7.10 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../第8章 名字空间和异常/第8章 名字空间和异常.html">
+            
+                <a href="../第8章 名字空间和异常/第8章 名字空间和异常.html">
+            
+                    
+                    第8章 名字空间和异常
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" >
+            
+                <span>
+            
+                    
+                    8.1 模块化和界面
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" >
+            
+                <span>
+            
+                    
+                    8.2 名字空间
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" >
+            
+                <span>
+            
+                    
+                    8.2.1 带限定词的名字
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" >
+            
+                <span>
+            
+                    
+                    8.2.2 使用声明
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.3" >
+            
+                <span>
+            
+                    
+                    8.2.3 使用指令
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.4" >
+            
+                <span>
+            
+                    
+                    8.2.4 多重界面
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.5" >
+            
+                <span>
+            
+                    
+                    8.2.5 避免名字冲突
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.6" >
+            
+                <span>
+            
+                    
+                    8.2.6 名字查找
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.7" >
+            
+                <span>
+            
+                    
+                    8.2.7 名字空间别名
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.8" >
+            
+                <span>
+            
+                    
+                    8.2.8 名字空间组合
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.9" >
+            
+                <span>
+            
+                    
+                    8.2.9 名字空间和老代码
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" >
+            
+                <span>
+            
+                    
+                    8.3 异常
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.3.1" >
+            
+                <span>
+            
+                    
+                    8.3.1 抛出和捕捉
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.2" >
+            
+                <span>
+            
+                    
+                    8.3.2 异常的辨识
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3.3" >
+            
+                <span>
+            
+                    
+                    8.3.3 在计算器中的异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" >
+            
+                <span>
+            
+                    
+                    8.4 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" >
+            
+                <span>
+            
+                    
+                    8.5 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../第9章 源文件和程序/第9章 源文件和程序.html">
+            
+                <a href="../第9章 源文件和程序/第9章 源文件和程序.html">
+            
+                    
+                    第9章 源文件和程序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" >
+            
+                <span>
+            
+                    
+                    9.1 分别编译
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" >
+            
+                <span>
+            
+                    
+                    9.2 连接
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" >
+            
+                <span>
+            
+                    
+                    9.2.1 头文件
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" >
+            
+                <span>
+            
+                    
+                    9.2.2 标准库头文件
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.3" >
+            
+                <span>
+            
+                    
+                    9.2.3 单一定义规则
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.4" >
+            
+                <span>
+            
+                    
+                    9.2.5 连接与指向函数的指针
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" >
+            
+                <span>
+            
+                    
+                    9.3 使用头文件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" >
+            
+                <span>
+            
+                    
+                    9.3.1 单一头文件
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" >
+            
+                <span>
+            
+                    
+                    9.3.2 多个头文件
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.3" >
+            
+                <span>
+            
+                    
+                    9.3.3 包含保护符
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" >
+            
+                <span>
+            
+                    
+                    9.4 程序
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.4.1" >
+            
+                <span>
+            
+                    
+                    9.4.1 非局部变量的初始化
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" >
+            
+                <span>
+            
+                    
+                    9.5 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" >
+            
+                <span>
+            
+                    
+                    9.6 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../第10章 类/第10章 类.html">
+            
+                <a href="../第10章 类/第10章 类.html">
+            
+                    
+                    第10章 类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" >
+            
+                <span>
+            
+                    
+                    10.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" >
+            
+                <span>
+            
+                    
+                    10.2 类
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.2.1" >
+            
+                <span>
+            
+                    
+                    10.2.1 成员函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.2" >
+            
+                <span>
+            
+                    
+                    10.2.2 访问控制
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.3" >
+            
+                <span>
+            
+                    
+                    10.2.3 构造函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.4" >
+            
+                <span>
+            
+                    
+                    10.2.4 静态成员
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.5" >
+            
+                <span>
+            
+                    
+                    10.2.5 类对象的复制
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.6" >
+            
+                <span>
+            
+                    
+                    10.2.6 常量成员函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.7" >
+            
+                <span>
+            
+                    
+                    10.2.7 自引用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.8" >
+            
+                <span>
+            
+                    
+                    10.2.8 结构和类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2.9" >
+            
+                <span>
+            
+                    
+                    10.2.9 在类内部的函数定义
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" >
+            
+                <span>
+            
+                    
+                    10.3 高效的用户定义类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.3.1" >
+            
+                <span>
+            
+                    
+                    10.3.1 成员函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.2" >
+            
+                <span>
+            
+                    
+                    10.3.2 协助函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.3" >
+            
+                <span>
+            
+                    
+                    10.3.3 重载的运算符
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3.4" >
+            
+                <span>
+            
+                    
+                    10.3.4 具体类型的意义
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" >
+            
+                <span>
+            
+                    
+                    10.4 对象
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.4.1" >
+            
+                <span>
+            
+                    
+                    10.4.1 析构函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.2" >
+            
+                <span>
+            
+                    
+                    10.4.2 默认构造函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.3" >
+            
+                <span>
+            
+                    
+                    10.4.3 构造和析构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.4" >
+            
+                <span>
+            
+                    
+                    10.4.4 局部变量
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.5" >
+            
+                <span>
+            
+                    
+                    10.4.5 自由存储
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.6" >
+            
+                <span>
+            
+                    
+                    10.4.6 类对象作为成员
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.7" >
+            
+                <span>
+            
+                    
+                    10.4.7 数组
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.8" >
+            
+                <span>
+            
+                    
+                    10.4.8 局部静态存储
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.9" >
+            
+                <span>
+            
+                    
+                    10.4.9 非局部存储
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.10" >
+            
+                <span>
+            
+                    
+                    10.4.10 临时对象
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.11" >
+            
+                <span>
+            
+                    
+                    10.4.11 对象的放置
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.12" >
+            
+                <span>
+            
+                    
+                    10.4.12 联合
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" >
+            
+                <span>
+            
+                    
+                    10.5 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" >
+            
+                <span>
+            
+                    
+                    10.6 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../第11章 运算符重载/第11章 运算符重载.html">
+            
+                <a href="../第11章 运算符重载/第11章 运算符重载.html">
+            
+                    
+                    第11章 运算符重载
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" >
+            
+                <span>
+            
+                    
+                    11.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" >
+            
+                <span>
+            
+                    
+                    11.2 运算符函数
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.2.1" >
+            
+                <span>
+            
+                    
+                    11.2.1 二元和一元运算符
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.2" >
+            
+                <span>
+            
+                    
+                    11.2.2 运算符的预定义意义
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.3" >
+            
+                <span>
+            
+                    
+                    11.2.3 运算符和用户定义类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2.4" >
+            
+                <span>
+            
+                    
+                    11.2.4 名字空间里的运算符
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" >
+            
+                <span>
+            
+                    
+                    11.3 一个复数类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.3.1" >
+            
+                <span>
+            
+                    
+                    11.3.1 成员运算符和非成员运算符
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3.2" >
+            
+                <span>
+            
+                    
+                    11.3.2 混合模式算术
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3.3" >
+            
+                <span>
+            
+                    
+                    11.3.3 初始化
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3.4" >
+            
+                <span>
+            
+                    
+                    11.3.4 复制
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3.5" >
+            
+                <span>
+            
+                    
+                    11.3.5 构造函数和转换
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3.6" >
+            
+                <span>
+            
+                    
+                    11.3.6 文字量
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3.7" >
+            
+                <span>
+            
+                    
+                    11.3.7 另一些成员函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3.8" >
+            
+                <span>
+            
+                    
+                    11.3.8 协助函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" >
+            
+                <span>
+            
+                    
+                    11.4 转换运算符
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.4.1" >
+            
+                <span>
+            
+                    
+                    11.4.1 歧义性
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" >
+            
+                <span>
+            
+                    
+                    11.5 友元
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.5.1" >
+            
+                <span>
+            
+                    
+                    11.5.1 友元的寻找
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5.2" >
+            
+                <span>
+            
+                    
+                    11.5.2 友元和成员
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" >
+            
+                <span>
+            
+                    
+                    11.6 大型对象
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" >
+            
+                <span>
+            
+                    
+                    11.7 基本运算符
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.7.1" >
+            
+                <span>
+            
+                    
+                    11.7.1 显式构造函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" >
+            
+                <span>
+            
+                    
+                    11.8 下标
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" >
+            
+                <span>
+            
+                    
+                    11.9 函数调用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.10" >
+            
+                <span>
+            
+                    
+                    11.10 间接
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.11" >
+            
+                <span>
+            
+                    
+                    11.11 增量和减量
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.12" >
+            
+                <span>
+            
+                    
+                    11.12 一个字符串类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.13" >
+            
+                <span>
+            
+                    
+                    11.13 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.14" >
+            
+                <span>
+            
+                    
+                    11.14 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../第12章 派生类/第12章 派生类.html">
+            
+                <a href="../第12章 派生类/第12章 派生类.html">
+            
+                    
+                    第12章 派生类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" >
+            
+                <span>
+            
+                    
+                    12.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" >
+            
+                <span>
+            
+                    
+                    12.2 派生类
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.2.1" >
+            
+                <span>
+            
+                    
+                    12.2.1 成员函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2.2" >
+            
+                <span>
+            
+                    
+                    12.2.2 构造函数和析构函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2.3" >
+            
+                <span>
+            
+                    
+                    12.2.3 复制
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2.4" >
+            
+                <span>
+            
+                    
+                    12.2.4 类层次结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2.5" >
+            
+                <span>
+            
+                    
+                    12.2.5 类型域
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2.6" >
+            
+                <span>
+            
+                    
+                    12.2.6 虚函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" >
+            
+                <span>
+            
+                    
+                    12.3 抽象类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" >
+            
+                <span>
+            
+                    
+                    12.4 类层次结构的设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.4.1" >
+            
+                <span>
+            
+                    
+                    12.4.1 一个传统的层次结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4.2" >
+            
+                <span>
+            
+                    
+                    12.4.2 抽象类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4.3" >
+            
+                <span>
+            
+                    
+                    12.4.3 其他实现方式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4.4" >
+            
+                <span>
+            
+                    
+                    12.4.4 对象创建的局部化
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" >
+            
+                <span>
+            
+                    
+                    12.5 类层次结构和抽象类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" >
+            
+                <span>
+            
+                    
+                    12.6 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" >
+            
+                <span>
+            
+                    
+                    12.7 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../第13章 模版/第13章 模版.html">
+            
+                <a href="../第13章 模版/第13章 模版.html">
+            
+                    
+                    第13章 模版
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" >
+            
+                <span>
+            
+                    
+                    13.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" >
+            
+                <span>
+            
+                    
+                    13.2 一个简单的String模版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.2.1" >
+            
+                <span>
+            
+                    
+                    13.2.1 定义一个模版
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.2" >
+            
+                <span>
+            
+                    
+                    13.2.2 模版实例化
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.3" >
+            
+                <span>
+            
+                    
+                    13.2.3 模版参数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.4" >
+            
+                <span>
+            
+                    
+                    13.2.4 类型等价
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.5" >
+            
+                <span>
+            
+                    
+                    13.2.5 类型检查
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" >
+            
+                <span>
+            
+                    
+                    13.3 函数模版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.3.1" >
+            
+                <span>
+            
+                    
+                    13.3.1 函数模版的参数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3.2" >
+            
+                <span>
+            
+                    
+                    13.3.2 函数模版的重载
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" >
+            
+                <span>
+            
+                    
+                    13.4 用模版参数描述策略
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" >
+            
+                <span>
+            
+                    
+                    13.4.1 默认模版参数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" >
+            
+                <span>
+            
+                    
+                    13.5 专门化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" >
+            
+                <span>
+            
+                    
+                    13.5.1 专门化的顺序
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" >
+            
+                <span>
+            
+                    
+                    13.5.2 模版函数的专门化
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" >
+            
+                <span>
+            
+                    
+                    13.6 派生和模版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.6.1" >
+            
+                <span>
+            
+                    
+                    13.6.1 参数化和继承
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6.2" >
+            
+                <span>
+            
+                    
+                    13.6.2 成员模版
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6.3" >
+            
+                <span>
+            
+                    
+                    13.6.3 继承关系
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" >
+            
+                <span>
+            
+                    
+                    13.7 源代码组织
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" >
+            
+                <span>
+            
+                    
+                    13.8 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" >
+            
+                <span>
+            
+                    
+                    13.9 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../第14章 异常处理/第14章 异常处理.html">
+            
+                <a href="../第14章 异常处理/第14章 异常处理.html">
+            
+                    
+                    第14章 异常处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" >
+            
+                <span>
+            
+                    
+                    14.1 错误处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1.1" >
+            
+                <span>
+            
+                    
+                    14.1.1 关于异常的其他观点
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" >
+            
+                <span>
+            
+                    
+                    14.2 异常的结组
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.2.1" >
+            
+                <span>
+            
+                    
+                    14.2.1 派生的异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2.2" >
+            
+                <span>
+            
+                    
+                    14.2.2 多个异常的组合
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" >
+            
+                <span>
+            
+                    
+                    14.3 捕捉异常
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.3.1" >
+            
+                <span>
+            
+                    
+                    14.3.1 重新抛出
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3.2" >
+            
+                <span>
+            
+                    
+                    14.3.2 捕捉所有异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" >
+            
+                <span>
+            
+                    
+                    14.4 资源管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.4.1" >
+            
+                <span>
+            
+                    
+                    14.4.1 构造函数和析构函数的使用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4.2" >
+            
+                <span>
+            
+                    
+                    14.4.2 auto_ptr
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4.3" >
+            
+                <span>
+            
+                    
+                    14.4.3 告诫
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4.4" >
+            
+                <span>
+            
+                    
+                    14.4.4 异常和new
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4.5" >
+            
+                <span>
+            
+                    
+                    14.4.5 资源耗尽
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4.6" >
+            
+                <span>
+            
+                    
+                    14.4.6 构造函数里的异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4.7" >
+            
+                <span>
+            
+                    
+                    14.4.7 析构函数里的异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" >
+            
+                <span>
+            
+                    
+                    14.5 不是错误的异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" >
+            
+                <span>
+            
+                    
+                    14.6 异常的描述
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.6.1" >
+            
+                <span>
+            
+                    
+                    14.6.1 对异常描述的检查
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6.2" >
+            
+                <span>
+            
+                    
+                    14.6.2 未预期的异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6.3" >
+            
+                <span>
+            
+                    
+                    14.6.3 异常的映射
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" >
+            
+                <span>
+            
+                    
+                    14.7 未捕捉的异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" >
+            
+                <span>
+            
+                    
+                    14.8 异常和效率
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" >
+            
+                <span>
+            
+                    
+                    14.9 处理错误的其他方式
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" >
+            
+                <span>
+            
+                    
+                    14.10 标准异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" >
+            
+                <span>
+            
+                    
+                    14.11 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" >
+            
+                <span>
+            
+                    
+                    14.12 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../第15章 类层次结构/第15章 类层次结构.html">
+            
+                <a href="../第15章 类层次结构/第15章 类层次结构.html">
+            
+                    
+                    第15章 类层次结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" >
+            
+                <span>
+            
+                    
+                    15.1 引言和概述
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" >
+            
+                <span>
+            
+                    
+                    15.2 多重继承
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.2.1" >
+            
+                <span>
+            
+                    
+                    15.2.1 歧义性解析
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.2" >
+            
+                <span>
+            
+                    
+                    15.2.2 继承和使用声明
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.3" >
+            
+                <span>
+            
+                    
+                    15.2.3 重复的基类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.4" >
+            
+                <span>
+            
+                    
+                    15.2.4 虚基类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2.5" >
+            
+                <span>
+            
+                    
+                    15.2.5 使用多重继承
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" >
+            
+                <span>
+            
+                    
+                    15.3 访问控制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.3.1" >
+            
+                <span>
+            
+                    
+                    15.3.1 保护成员
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3.2" >
+            
+                <span>
+            
+                    
+                    15.3.2 对基类的访问
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" >
+            
+                <span>
+            
+                    
+                    15.4 运行时类型信息
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.4.1" >
+            
+                <span>
+            
+                    
+                    15.4.1 dynamic_cast
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4.2" >
+            
+                <span>
+            
+                    
+                    15.4.2 在类层次结构中漫游
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4.3" >
+            
+                <span>
+            
+                    
+                    15.4.3 类对象的构造与析构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4.4" >
+            
+                <span>
+            
+                    
+                    15.4.4 typeid和扩展的类型信息
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4.5" >
+            
+                <span>
+            
+                    
+                    15.4.5 RTTI的使用和误用
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" >
+            
+                <span>
+            
+                    
+                    15.5 指向成员的指针
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.5.1" >
+            
+                <span>
+            
+                    
+                    15.5.1 基类和派生类
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" >
+            
+                <span>
+            
+                    
+                    15.6 自由存储
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.6.1" >
+            
+                <span>
+            
+                    
+                    15.6.1 数组分配
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6.2" >
+            
+                <span>
+            
+                    
+                    15.6.2 虚构造函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" >
+            
+                <span>
+            
+                    
+                    15.7 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" >
+            
+                <span>
+            
+                    
+                    15.8 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../第16章 库组织和容器/第16章 库组织和容器.html">
+            
+                <a href="../第16章 库组织和容器/第16章 库组织和容器.html">
+            
+                    
+                    第16章 库组织和容器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" >
+            
+                <span>
+            
+                    
+                    16.1 标准库的设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1.1" >
+            
+                <span>
+            
+                    
+                    16.1.1 设计约束
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.1.2" >
+            
+                <span>
+            
+                    
+                    16.1.2 标准库组织
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.1.3" >
+            
+                <span>
+            
+                    
+                    16.1.3 语言支持
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" >
+            
+                <span>
+            
+                    
+                    16.2 容器设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.2.1" >
+            
+                <span>
+            
+                    
+                    16.2.1 专门化的容器和迭代器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2.2" >
+            
+                <span>
+            
+                    
+                    16.2.2 有基类的容器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2.3" >
+            
+                <span>
+            
+                    
+                    16.2.3 STL容器
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" >
+            
+                <span>
+            
+                    
+                    16.3 向量
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.3.1" >
+            
+                <span>
+            
+                    
+                    16.3.1 类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.2" >
+            
+                <span>
+            
+                    
+                    16.3.2 迭代器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.3" >
+            
+                <span>
+            
+                    
+                    16.3.3 元素访问
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.4" >
+            
+                <span>
+            
+                    
+                    16.3.4 构造函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.5" >
+            
+                <span>
+            
+                    
+                    16.3.5 堆栈操作
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.6" >
+            
+                <span>
+            
+                    
+                    16.3.6 表操作
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.7" >
+            
+                <span>
+            
+                    
+                    16.3.7 元素定位
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.8" >
+            
+                <span>
+            
+                    
+                    16.3.8 大小和容量
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.9" >
+            
+                <span>
+            
+                    
+                    16.3.9 其他成员函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.10" >
+            
+                <span>
+            
+                    
+                    16.3.10 协助函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3.11" >
+            
+                <span>
+            
+                    
+                    16.3.11 vector<bool>
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" >
+            
+                <span>
+            
+                    
+                    16.4 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" >
+            
+                <span>
+            
+                    
+                    16.5 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../第17章 标准容器/第17章 标准容器.html">
+            
+                <a href="../第17章 标准容器/第17章 标准容器.html">
+            
+                    
+                    第17章 标准容器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../第17章 标准容器/171-标准容器.html">
+            
+                <a href="../第17章 标准容器/171-标准容器.html">
+            
+                    
+                    17.1 标准容器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1.1" >
+            
+                <span>
+            
+                    
+                    17.1.1 操作综述
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.1.2" >
+            
+                <span>
+            
+                    
+                    17.1.2 容器综述
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.1.3" >
+            
+                <span>
+            
+                    
+                    17.1.3 表示
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.1.4" >
+            
+                <span>
+            
+                    
+                    17.1.4 对元素的要求
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" >
+            
+                <span>
+            
+                    
+                    17.2 序列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.2.1" >
+            
+                <span>
+            
+                    
+                    17.2.1 向量---vector
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2.2" >
+            
+                <span>
+            
+                    
+                    17.2.2 表---list
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2.3" >
+            
+                <span>
+            
+                    
+                    17.2.3 双端队列---deque
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" >
+            
+                <span>
+            
+                    
+                    17.3 序列适配器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.3.1" >
+            
+                <span>
+            
+                    
+                    17.3.1 堆栈---stack
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3.2" >
+            
+                <span>
+            
+                    
+                    17.3.2 队列---queue
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3.3" >
+            
+                <span>
+            
+                    
+                    17.3.3 优先队列---priority__queue
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.4" >
+            
+                <span>
+            
+                    
+                    17.4 关联容器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.4.1" >
+            
+                <span>
+            
+                    
+                    17.4.1 映射---map
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.4.2" >
+            
+                <span>
+            
+                    
+                    17.4.2 多重映射---multimap
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.4.3" >
+            
+                <span>
+            
+                    
+                    17.4.3 集合---set
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.4.4" >
+            
+                <span>
+            
+                    
+                    17.4.4 多重集合---multiset
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.5" >
+            
+                <span>
+            
+                    
+                    17.5 拟容器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.5.1" >
+            
+                <span>
+            
+                    
+                    17.5.1 串---string
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.5.2" >
+            
+                <span>
+            
+                    
+                    17.5.2 值向量---valarray
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.5.3" >
+            
+                <span>
+            
+                    
+                    17.5.3 位集合---bitset
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.5.4" >
+            
+                <span>
+            
+                    
+                    17.5.4 内部数组
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.6" >
+            
+                <span>
+            
+                    
+                    17.6 定义新容器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.6.1" >
+            
+                <span>
+            
+                    
+                    17.6.1 散列映射---hash__map
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.6.2" >
+            
+                <span>
+            
+                    
+                    17.6.2 表示和构造
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.6.3" >
+            
+                <span>
+            
+                    
+                    17.6.3 其他散列关联容器
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.7" >
+            
+                <span>
+            
+                    
+                    17.7 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.8" >
+            
+                <span>
+            
+                    
+                    17.8 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../第18章 算法和函数对象/第18章 算法和函数对象.html">
+            
+                <a href="../第18章 算法和函数对象/第18章 算法和函数对象.html">
+            
+                    
+                    第18章 算法和函数对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.1" >
+            
+                <span>
+            
+                    
+                    18.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2" >
+            
+                <span>
+            
+                    
+                    18.2 标准库算法综述
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3" >
+            
+                <span>
+            
+                    
+                    18.3 序列和容器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.3.1" >
+            
+                <span>
+            
+                    
+                    18.3.1 输入序列
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.4" >
+            
+                <span>
+            
+                    
+                    18.4 函数对象
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.4.1" >
+            
+                <span>
+            
+                    
+                    18.4.1 函数对象的基类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.4.2" >
+            
+                <span>
+            
+                    
+                    18.4.2 谓词
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.4.3" >
+            
+                <span>
+            
+                    
+                    18.4.3 算术函数对象
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.4.4" >
+            
+                <span>
+            
+                    
+                    18.4.4 约束器、适配器和否定器
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.5" >
+            
+                <span>
+            
+                    
+                    18.5 非修改性序列算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.5.1" >
+            
+                <span>
+            
+                    
+                    18.5.1 对每个做---for__each
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.5.2" >
+            
+                <span>
+            
+                    
+                    18.5.2 查找族函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.5.3" >
+            
+                <span>
+            
+                    
+                    18.5.3 计数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.5.4" >
+            
+                <span>
+            
+                    
+                    18.5.4 相等和不匹配
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.5.5" >
+            
+                <span>
+            
+                    
+                    18.5.5 搜索
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6" >
+            
+                <span>
+            
+                    
+                    18.6 修改性序列算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.6.1" >
+            
+                <span>
+            
+                    
+                    18.6.1 复制
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6.2" >
+            
+                <span>
+            
+                    
+                    18.6.2 变换
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6.3" >
+            
+                <span>
+            
+                    
+                    18.6.3 惟一话
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6.4" >
+            
+                <span>
+            
+                    
+                    18.6.4 取代
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6.5" data-path="../第18章 算法和函数对象/1865-删除.html">
+            
+                <a href="../第18章 算法和函数对象/1865-删除.html">
+            
+                    
+                    18.6.5 删除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6.6" data-path="../第18章 算法和函数对象/1866-填充和生成.html">
+            
+                <a href="../第18章 算法和函数对象/1866-填充和生成.html">
+            
+                    
+                    18.6.6 填充和生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6.7" data-path="../第18章 算法和函数对象/1867-反转和旋转.html">
+            
+                <a href="../第18章 算法和函数对象/1867-反转和旋转.html">
+            
+                    
+                    18.6.7 反转和旋转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6.8" >
+            
+                <span>
+            
+                    
+                    18.6.8 交换
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.7" >
+            
+                <span>
+            
+                    
+                    18.7 排序的序列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.7.1" >
+            
+                <span>
+            
+                    
+                    18.7.1 排序
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.7.2" >
+            
+                <span>
+            
+                    
+                    18.7.2 二分检索
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.7.3" >
+            
+                <span>
+            
+                    
+                    18.7.3 归并
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.7.4" >
+            
+                <span>
+            
+                    
+                    18.7.4 划分
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.7.5" >
+            
+                <span>
+            
+                    
+                    18.7.5 序列上的集合运算
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.8" >
+            
+                <span>
+            
+                    
+                    18.8 堆
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.9" >
+            
+                <span>
+            
+                    
+                    18.9 最小和最大
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.10" >
+            
+                <span>
+            
+                    
+                    18.10 排列
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.11" >
+            
+                <span>
+            
+                    
+                    18.11 C风格算法
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.12" >
+            
+                <span>
+            
+                    
+                    18.12 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.13" >
+            
+                <span>
+            
+                    
+                    18.13 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../第19章 迭代器和分配器/第19章 迭代器和分配器.html">
+            
+                <a href="../第19章 迭代器和分配器/第19章 迭代器和分配器.html">
+            
+                    
+                    第19章 迭代器和分配器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.1" >
+            
+                <span>
+            
+                    
+                    19.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.2" >
+            
+                <span>
+            
+                    
+                    19.2 迭代器和序列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.2.1" >
+            
+                <span>
+            
+                    
+                    19.2.1 迭代器的操作
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.2.2" >
+            
+                <span>
+            
+                    
+                    19.2.2 迭代器特征类---iterator__Iraits
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.2.3" >
+            
+                <span>
+            
+                    
+                    19.2.3 迭代器类别
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3" >
+            
+                <span>
+            
+                    
+                    19.2.4 插入器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.4" >
+            
+                <span>
+            
+                    
+                    19.2.5 反向迭代器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.5" >
+            
+                <span>
+            
+                    
+                    19.2.6 流迭代器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.6" >
+            
+                <span>
+            
+                    
+                    19.3 带检查迭代器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.6.1" >
+            
+                <span>
+            
+                    
+                    19.3.1 异常、容器和算法
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.7" >
+            
+                <span>
+            
+                    
+                    19.4 分配器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.7.1" >
+            
+                <span>
+            
+                    
+                    19.4.1 标准分配器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.7.2" >
+            
+                <span>
+            
+                    
+                    19.4.2 一个用户定义分配器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.7.3" >
+            
+                <span>
+            
+                    
+                    19.4.3 广义的分配器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.7.4" >
+            
+                <span>
+            
+                    
+                    19.4.4 未初始化的存储
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.7.5" >
+            
+                <span>
+            
+                    
+                    19.4.5 动态存储
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.7.6" >
+            
+                <span>
+            
+                    
+                    19.4.6 C风格的分配
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.8" >
+            
+                <span>
+            
+                    
+                    19.5 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.9" >
+            
+                <span>
+            
+                    
+                    19.6 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../第20章 串/第20章 串.html">
+            
+                <a href="../第20章 串/第20章 串.html">
+            
+                    
+                    第20章 串
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1" >
+            
+                <span>
+            
+                    
+                    20.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.2" >
+            
+                <span>
+            
+                    
+                    20.2 字符
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.2.1" >
+            
+                <span>
+            
+                    
+                    20.2.1 字符特征类---char__traits
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3" >
+            
+                <span>
+            
+                    
+                    20.3 基础串类---basic string
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.3.1" >
+            
+                <span>
+            
+                    
+                    20.3.1 类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.2" >
+            
+                <span>
+            
+                    
+                    20.3.2 迭代器
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.3" >
+            
+                <span>
+            
+                    
+                    20.3.3 元素访问
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.4" >
+            
+                <span>
+            
+                    
+                    20.3.4 构造函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.5" >
+            
+                <span>
+            
+                    
+                    20.3.5 错误
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.6" >
+            
+                <span>
+            
+                    
+                    20.3.6 赋值
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.7" >
+            
+                <span>
+            
+                    
+                    20.3.7 到C风格字符串的转换
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.8" >
+            
+                <span>
+            
+                    
+                    20.3.8 比较
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.9" >
+            
+                <span>
+            
+                    
+                    20.3.9 插入
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.10" >
+            
+                <span>
+            
+                    
+                    20.3.10 拼接
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.11" >
+            
+                <span>
+            
+                    
+                    20.3.11 查找
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.12" >
+            
+                <span>
+            
+                    
+                    20.3.12 替换
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.13" >
+            
+                <span>
+            
+                    
+                    20.3.13 子串
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.14" >
+            
+                <span>
+            
+                    
+                    20.3.14 大小和容量
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.15" >
+            
+                <span>
+            
+                    
+                    20.3.15 I\/O操作
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3.16" >
+            
+                <span>
+            
+                    
+                    20.3.16 交换
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4" >
+            
+                <span>
+            
+                    
+                    20.4 C标准库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.4.1" >
+            
+                <span>
+            
+                    
+                    20.4.1 C风格字符串
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.4.2" >
+            
+                <span>
+            
+                    
+                    20.4.2 字符分类
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.5" >
+            
+                <span>
+            
+                    
+                    20.5 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.6" >
+            
+                <span>
+            
+                    
+                    20.6 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../第21章 流/第21章 流.html">
+            
+                <a href="../第21章 流/第21章 流.html">
+            
+                    
+                    第21章 流
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.1" >
+            
+                <span>
+            
+                    
+                    21.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.2" >
+            
+                <span>
+            
+                    
+                    21.2 输出
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.2.1" >
+            
+                <span>
+            
+                    
+                    21.2.1 输出流
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.2.2" >
+            
+                <span>
+            
+                    
+                    21.2.2 内部类型的输出
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.2.3" >
+            
+                <span>
+            
+                    
+                    21.2.3 用户定义类型的输出
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.3" >
+            
+                <span>
+            
+                    
+                    21.3 输入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.3.1" >
+            
+                <span>
+            
+                    
+                    21.3.1 输入流
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.3.2" >
+            
+                <span>
+            
+                    
+                    21.3.2 内部类型的输入
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.3.3" >
+            
+                <span>
+            
+                    
+                    21.3.3 流状态
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.3.4" >
+            
+                <span>
+            
+                    
+                    21.3.4 字符的输入
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.3.5" >
+            
+                <span>
+            
+                    
+                    21.3.5 用户定义类型的输入
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.3.6" >
+            
+                <span>
+            
+                    
+                    21.3.6 异常
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.3.7" >
+            
+                <span>
+            
+                    
+                    21.3.7 流的联结
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.3.8" >
+            
+                <span>
+            
+                    
+                    21.3.8 哨位
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.4" >
+            
+                <span>
+            
+                    
+                    21.4 格式化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.4.1" >
+            
+                <span>
+            
+                    
+                    21.4.1 格式状态
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.4.2" >
+            
+                <span>
+            
+                    
+                    21.4.2 整数输出
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.4.3" >
+            
+                <span>
+            
+                    
+                    21.4.3 浮点数输出
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.4.4" >
+            
+                <span>
+            
+                    
+                    21.4.4 输出域
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.4.5" >
+            
+                <span>
+            
+                    
+                    21.4.5 域的调整
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.4.6" >
+            
+                <span>
+            
+                    
+                    21.4.6 操控符
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.5" >
+            
+                <span>
+            
+                    
+                    21.6 缓冲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.5.1" >
+            
+                <span>
+            
+                    
+                    21.6.1 输出流和缓冲区
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.5.2" >
+            
+                <span>
+            
+                    
+                    21.6.2 输入流和缓冲区
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.5.3" >
+            
+                <span>
+            
+                    
+                    21.6.3 流和缓冲区
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.5.4" >
+            
+                <span>
+            
+                    
+                    21.6.4 流缓冲区
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.6" >
+            
+                <span>
+            
+                    
+                    21.7 现场
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.6.1" >
+            
+                <span>
+            
+                    
+                    21.7.1 流回调
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.7" >
+            
+                <span>
+            
+                    
+                    21.8 C输入\/输出
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.8" >
+            
+                <span>
+            
+                    
+                    21.9 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.9" >
+            
+                <span>
+            
+                    
+                    21.10 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../第22章 数值/第22章 数值.html">
+            
+                <a href="../第22章 数值/第22章 数值.html">
+            
+                    
+                    第22章 数值
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" >
+            
+                <span>
+            
+                    
+                    22.1 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.2" >
+            
+                <span>
+            
+                    
+                    22.2 数值的限制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.2.1" >
+            
+                <span>
+            
+                    
+                    22.2.1 表示限制的宏
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.3" >
+            
+                <span>
+            
+                    
+                    22.3 标准数学函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4" >
+            
+                <span>
+            
+                    
+                    22.4 向量算术
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.4.1" >
+            
+                <span>
+            
+                    
+                    22.4.1 valarray的构造
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4.2" >
+            
+                <span>
+            
+                    
+                    22.4.2 valarray的下标和赋值
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4.3" >
+            
+                <span>
+            
+                    
+                    22.4.3 成员操作
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4.4" >
+            
+                <span>
+            
+                    
+                    22.4.4 非成员函数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4.5" >
+            
+                <span>
+            
+                    
+                    22.4.5 切割
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4.6" >
+            
+                <span>
+            
+                    
+                    22.4.6 切割数组---slice__array
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4.7" >
+            
+                <span>
+            
+                    
+                    22.4.7 临时量、复制和循环
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4.8" >
+            
+                <span>
+            
+                    
+                    22.4.8 广义切割
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4.9" >
+            
+                <span>
+            
+                    
+                    22.4.9 屏蔽
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4.10" >
+            
+                <span>
+            
+                    
+                    22.4.10 间接数组---indirect array
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.5" >
+            
+                <span>
+            
+                    
+                    22.5 复数算术
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.6" >
+            
+                <span>
+            
+                    
+                    22.6 通用数值算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.6.1" >
+            
+                <span>
+            
+                    
+                    22.6.1 累积---accumulate
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.6.2" >
+            
+                <span>
+            
+                    
+                    22.6.2 内积---inner__product
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.6.3" >
+            
+                <span>
+            
+                    
+                    22.6.3 增量变化
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.7" >
+            
+                <span>
+            
+                    
+                    22.7 随机数
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.8" >
+            
+                <span>
+            
+                    
+                    22.8 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.9" >
+            
+                <span>
+            
+                    
+                    22.9 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../第23章 开发和设计/第23章 开发和设计.html">
+            
+                <a href="../第23章 开发和设计/第23章 开发和设计.html">
+            
+                    
+                    第23章 开发和设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.25.1" >
+            
+                <span>
+            
+                    
+                    23.1 概述
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.2" >
+            
+                <span>
+            
+                    
+                    23.2 引言
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.3" >
+            
+                <span>
+            
+                    
+                    23.3 目的与手段
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.4" >
+            
+                <span>
+            
+                    
+                    23.4 开发过程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.25.4.1" >
+            
+                <span>
+            
+                    
+                    23.4.1 开发循环
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.4.2" >
+            
+                <span>
+            
+                    
+                    23.4.2 设计目标
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.4.3" >
+            
+                <span>
+            
+                    
+                    23.4.3 设计步骤
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.4.4" >
+            
+                <span>
+            
+                    
+                    23.4.4 试验和分析
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.4.5" >
+            
+                <span>
+            
+                    
+                    23.4.5 测试
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.4.6" >
+            
+                <span>
+            
+                    
+                    23.4.6 软件维护
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.4.7" >
+            
+                <span>
+            
+                    
+                    23.4.7 效率
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.5" >
+            
+                <span>
+            
+                    
+                    23.5 管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.25.5.1" >
+            
+                <span>
+            
+                    
+                    23.5.1 重用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.5.2" >
+            
+                <span>
+            
+                    
+                    23.5.2 规模
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.5.3" >
+            
+                <span>
+            
+                    
+                    23.5.3 个人
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.5.4" >
+            
+                <span>
+            
+                    
+                    23.5.4 混成设计
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.6" >
+            
+                <span>
+            
+                    
+                    23.6 带标注的参考文献
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.7" >
+            
+                <span>
+            
+                    
+                    23.7 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../第24章 设计和编程/第24章 设计和编程.html">
+            
+                <a href="../第24章 设计和编程/第24章 设计和编程.html">
+            
+                    
+                    第24章 设计和编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.26.1" >
+            
+                <span>
+            
+                    
+                    24.1 概述
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.2" >
+            
+                <span>
+            
+                    
+                    24.2 设计和程序设计语言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.26.2.1" >
+            
+                <span>
+            
+                    
+                    24.2.1 忽视类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.2.2" >
+            
+                <span>
+            
+                    
+                    24.2.2 忽视继承
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.2.3" >
+            
+                <span>
+            
+                    
+                    24.2.3 忽视静态类型检查
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.2.4" >
+            
+                <span>
+            
+                    
+                    24.2.4 忽视程序设计
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.2.5" >
+            
+                <span>
+            
+                    
+                    24.2.5 排他性地使用类层次结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.3" >
+            
+                <span>
+            
+                    
+                    24.3 类
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.26.3.1" >
+            
+                <span>
+            
+                    
+                    24.3.1 类表示什么
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.3.2" >
+            
+                <span>
+            
+                    
+                    24.3.2 类层次结构
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.3.3" >
+            
+                <span>
+            
+                    
+                    24.3.3 包容关系
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.3.4" >
+            
+                <span>
+            
+                    
+                    24.3.4 包容和继承
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.3.5" >
+            
+                <span>
+            
+                    
+                    24.3.5 使用关系
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.3.6" >
+            
+                <span>
+            
+                    
+                    24.3.6 编入程序里的关系
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.3.7" >
+            
+                <span>
+            
+                    
+                    24.3.7 类内的关系
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.4" >
+            
+                <span>
+            
+                    
+                    24.4 组件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.26.4.1" >
+            
+                <span>
+            
+                    
+                    24.4.1 模板
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.4.2" >
+            
+                <span>
+            
+                    
+                    24.4.2 界面和实现
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.4.3" >
+            
+                <span>
+            
+                    
+                    24.4.3 肥大的界面
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.5" >
+            
+                <span>
+            
+                    
+                    24.5 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../第25章 类的作用/第25章 类的作用.html">
+            
+                <a href="../第25章 类的作用/第25章 类的作用.html">
+            
+                    
+                    第25章 类的作用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.27.1" >
+            
+                <span>
+            
+                    
+                    25.1 类的种类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.2" >
+            
+                <span>
+            
+                    
+                    25.2 具体类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.27.2.1" >
+            
+                <span>
+            
+                    
+                    25.2.1 具体类型的重用
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.3" >
+            
+                <span>
+            
+                    
+                    25.3 抽象类型
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.4" >
+            
+                <span>
+            
+                    
+                    25.4 结点
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.27.4.1" >
+            
+                <span>
+            
+                    
+                    25.4.1 修改界面
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.5" >
+            
+                <span>
+            
+                    
+                    25.5 动作
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.6" >
+            
+                <span>
+            
+                    
+                    25.6 界面类
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.27.6.1" >
+            
+                <span>
+            
+                    
+                    25.6.1 调整界面
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.7" >
+            
+                <span>
+            
+                    
+                    25.7 句柄类
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.27.7.1" >
+            
+                <span>
+            
+                    
+                    25.7.1 句柄上的操作
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.8" >
+            
+                <span>
+            
+                    
+                    25.8 应用框架
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.9" >
+            
+                <span>
+            
+                    
+                    25.9 忠告
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.10" >
+            
+                <span>
+            
+                    
+                    25.10 练习
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.8.2 迭代器类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="381-迭代器的使用.html" class="navigation navigation-prev " aria-label="Previous page: 3.8.1 迭代器的使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="383-迭代器和io.html" class="navigation navigation-next " aria-label="Next page: 3.8.3 迭代器和I\/O">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.8.2 迭代器类型","level":"1.5.8.2","depth":3,"next":{"title":"3.8.3 迭代器和I\\/O","level":"1.5.8.3","depth":3,"path":"第3章 标准库概览/383-迭代器和io.md","ref":"第3章 标准库概览/383-迭代器和io.md","articles":[]},"previous":{"title":"3.8.1 迭代器的使用","level":"1.5.8.1","depth":3,"path":"第3章 标准库概览/381-迭代器的使用.md","ref":"第3章 标准库概览/381-迭代器的使用.md","articles":[]},"dir":"neutral"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第3章 标准库概览/382-迭代器类型.md","mtime":"2017-01-23T04:32:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-23T10:01:04.589Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
