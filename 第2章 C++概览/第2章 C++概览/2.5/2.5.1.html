@@ -929,7 +929,7 @@
                 <a href="../../../第3章 标准库概览/383-迭代器和io.html">
             
                     
-                    3.8.3 迭代器和I\/O
+                    3.8.3 迭代器和I/O
             
                 </a>
             
@@ -8790,10 +8790,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x7684;&#x6A21;&#x5757;">&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x7684;&#x6A21;&#x5757;</h2>
-<p>&#x2003;&#x2003;&#x57FA;&#x4E8E;&#x6A21;&#x5757;&#x7684;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8D8B;&#x5411;&#x4E8E;&#x4EE5;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x4E3A;&#x4E2D;&#x5FC3;&#xFF0C;&#x5728;&#x67D0;&#x4E2A;&#x7C7B;&#x578B;&#x7BA1;&#x7406;&#x6A21;&#x5757;&#x7684;&#x63A7;&#x5236;&#x4E4B;&#x4E0B;&#x5DE5;&#x4F5C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x6709;&#x8BB8;&#x591A;&#x5806;&#x6808;---&#x800C;&#x4E0D;&#x662F;&#x50CF;&#x524D;&#x9762;&#x90A3;&#x6837;&#x53EA;&#x7528;&#x4E00;&#x4E2A;&#x7531;Stack&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x7684;&#x5806;&#x6808;---&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x80FD;&#x4F1A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5806;&#x6808;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x5B83;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x7684;&#x754C;&#x9762;&#xFF1A;</p>
+<p>&#x2003;&#x2003;&#x57FA;&#x4E8E;&#x6A21;&#x5757;&#x7684;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8D8B;&#x5411;&#x4E8E;&#x4EE5;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x4E3A;&#x4E2D;&#x5FC3;&#xFF0C;&#x5728;&#x67D0;&#x4E2A;&#x7C7B;&#x578B;&#x7BA1;&#x7406;&#x6A21;&#x5757;&#x7684;&#x63A7;&#x5236;&#x4E4B;&#x4E0B;&#x5DE5;&#x4F5C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x6709;&#x8BB8;&#x591A;&#x5806;&#x6808;---&#x800C;&#x4E0D;&#x662F;&#x50CF;&#x524D;&#x9762;&#x90A3;&#x6837;&#x53EA;&#x7528;&#x4E00;&#x4E2A;&#x7531; Stack &#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x7684;&#x5806;&#x6808;---&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x80FD;&#x4F1A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5806;&#x6808;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x5B83;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x7684;&#x754C;&#x9762;&#xFF1A;</p>
 <pre><code class="lang-javascript">    namespace Stack
     {
-        struct Pep;                <span class="hljs-comment">// &#x5728;&#x53E6;&#x5916;&#x67D0;&#x4E2A;&#x5730;&#x65B9;&#x5B9A;&#x4E49;&#x5806;&#x6808;&#x7684;&#x5E03;&#x5C40;</span>
+        struct Rep;                <span class="hljs-comment">// &#x5728;&#x53E6;&#x5916;&#x67D0;&#x4E2A;&#x5730;&#x65B9;&#x5B9A;&#x4E49;&#x5806;&#x6808;&#x7684;&#x5E03;&#x5C40;</span>
         typedef Rep&amp; stack;
 
         stack create();            <span class="hljs-comment">// &#x505A;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x5806;&#x6808;</span>
@@ -8804,11 +8804,13 @@
     }
 </code></pre>
 <p>&#x58F0;&#x660E;</p>
-<pre><code>struct Rep;
-</code></pre><p>&#x8BF4;Rep&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x4F46;&#x5C06;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x7559;&#x5F85;&#x4EE5;&#x540E;&#x518D;&#x53BB;&#x5B9A;&#x4E49;&#x3002;&#x58F0;&#x660E;</p>
-<pre><code>typedef Rep&amp; stack;
-</code></pre><p>&#x786E;&#x5B9A;&#x540D;&#x5B57;stack&#x662F;&#x201C;&#x5BF9;Rep&#x7684;&#x5F15;&#x7528;&#x201D;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x60F3;&#x6CD5;&#x662F;&#xFF0C;&#x5806;&#x6808;&#x7531;Stack::stack&#x8868;&#x793A;&#xFF0C;&#x800C;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x7EC6;&#x8282;&#x5219;&#x5BF9;&#x7528;&#x6237;&#x9690;&#x85CF;&#x8D77;&#x6765;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x4E00;&#x4E2A;Stack::stack&#x7528;&#x8D77;&#x6765;&#x5F88;&#x50CF;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code class="lang-javascript">    struct Rep;
+</code></pre>
+<p>&#x8BF4; <code>Rep</code> &#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x4F46;&#x5C06;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x7559;&#x5F85;&#x4EE5;&#x540E;&#x518D;&#x53BB;&#x5B9A;&#x4E49;&#x3002;&#x58F0;&#x660E;</p>
+<pre><code class="lang-javascript">    typedef Rep&amp; stack;
+</code></pre>
+<p>&#x786E;&#x5B9A;&#x540D;&#x5B57; <code>stack</code> &#x662F;&#x201C;&#x5BF9;Rep&#x7684;&#x5F15;&#x7528;&#x201D;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x60F3;&#x6CD5;&#x662F;&#xFF0C;&#x5806;&#x6808;&#x7531; <code>Stack::stack</code> &#x8868;&#x793A;&#xFF0C;&#x800C;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x7EC6;&#x8282;&#x5219;&#x5BF9;&#x7528;&#x6237;&#x9690;&#x85CF;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x4E00;&#x4E2A; <code>Stack::stack</code> &#x7528;&#x8D77;&#x6765;&#x5F88;&#x50CF;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#xFF1A;</p>
 <pre><code class="lang-javascript">    struct Bad_pop { };
 
     <span class="hljs-keyword">void</span> f()
@@ -8826,8 +8828,8 @@
         Stack::destroy(s2);
     }
 </code></pre>
-<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4EE5;&#x51E0;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x5806;&#x6808;&#x3002;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;&#x7528;&#x6237;&#x5B8C;&#x5168;&#x4E0D;&#x5FC5;&#x77E5;&#x9053;&#x6211;&#x4EEC;&#x5230;&#x5E95;&#x662F;&#x600E;&#x4E48;&#x505A;&#x7684;&#x3002;&#x53EA;&#x8981;&#x6211;&#x4EEC;&#x80FD;&#x4FDD;&#x6301;&#x8FD9;&#x4E2A;&#x754C;&#x9762;&#x4E0D;&#x6539;&#x53D8;&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x51B3;&#x5B9A;&#x91CD;&#x65B0;&#x5B9E;&#x73B0;Stack&#xFF0C;&#x7528;&#x6237;&#x4E5F;&#x4E0D;&#x4F1A;&#x53D7;&#x5230;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x67D0;&#x4E2A;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x662F;&#x9884;&#x5148;&#x5206;&#x914D;&#x51E0;&#x4E2A;&#x5806;&#x6808;&#xFF0C;&#x800C;&#x8BA9;Stack::create()&#x9012;&#x4EA4;&#x51FA;&#x5230;&#x67D0;&#x4E2A;&#x5C1A;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x5806;&#x6808;&#x7684;&#x5F15;&#x7528;&#x3002;&#x800C;Stack::destroy()&#x5219;&#x5C06;&#x4E00;&#x4E2A;&#x5806;&#x6808;&#x8868;&#x793A;&#x6807;&#x8BB0;&#x4E3A;&#x672A;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x4EE5;&#x4F7F;Stack::create()&#x80FD;&#x591F;&#x91CD;&#x65B0;&#x7528;&#x5B83;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4EE5;&#x51E0;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x5806;&#x6808;&#x3002;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;&#x7528;&#x6237;&#x5B8C;&#x5168;&#x4E0D;&#x5FC5;&#x77E5;&#x9053;&#x6211;&#x4EEC;&#x5230;&#x5E95;&#x662F;&#x600E;&#x4E48;&#x505A;&#x7684;&#x3002;&#x53EA;&#x8981;&#x6211;&#x4EEC;&#x80FD;&#x4FDD;&#x6301;&#x8FD9;&#x4E2A;&#x754C;&#x9762;&#x4E0D;&#x6539;&#x53D8;&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x51B3;&#x5B9A;&#x91CD;&#x65B0;&#x5B9E;&#x73B0; Stack&#xFF0C;&#x7528;&#x6237;&#x4E5F;&#x4E0D;&#x4F1A;&#x53D7;&#x5230;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#x3002;</p>
+<p>&#x67D0;&#x4E2A;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x662F;&#x9884;&#x5148;&#x5206;&#x914D;&#x51E0;&#x4E2A;&#x5806;&#x6808;&#xFF0C;&#x800C;&#x8BA9; <code>Stack::create()</code> &#x9012;&#x4EA4;&#x51FA;&#x5230;&#x67D0;&#x4E2A;&#x5C1A;&#x672A;&#x4F7F;&#x7528;&#x7684;&#x5806;&#x6808;&#x7684;&#x5F15;&#x7528;&#x3002;&#x800C; <code>Stack::destroy()</code> &#x5219;&#x5C06;&#x4E00;&#x4E2A;&#x5806;&#x6808;&#x8868;&#x793A;&#x6807;&#x8BB0;&#x4E3A;&#x672A;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x4EE5;&#x4F7F; <code>Stack::create()</code> &#x80FD;&#x591F;&#x91CD;&#x65B0;&#x7528;&#x5B83;</p>
 <pre><code class="lang-javascript">    namespace Stack    <span class="hljs-comment">// &#x8868;&#x793A;</span>
     {
         <span class="hljs-keyword">const</span> int max_size = <span class="hljs-number">200</span>;
@@ -8845,17 +8847,129 @@
         typedef Rep&amp; stack;
     }
 
-    <span class="hljs-keyword">void</span> Stack::push(stack s, char c) { <span class="hljs-comment">/* &#x68C0;&#x67E5;s&#x7684;&#x4E0A;&#x6EA2;&#x5E76;&#x538B;&#x5165;c */</span> }
-    char Stack::pop(stack s) { <span class="hljs-comment">/* &#x68C0;&#x67E5;s&#x7684;&#x4E0B;&#x6EA2;&#x5E76;&#x5F39;&#x51FA; */</span> }
+    <span class="hljs-keyword">void</span> Stack::push(Stack::stack s, char c) { <span class="hljs-comment">/* &#x68C0;&#x67E5;s&#x7684;&#x4E0A;&#x6EA2;&#x5E76;&#x538B;&#x5165;c */</span> }
+    char Stack::pop(Stack::stack s) { <span class="hljs-comment">/* &#x68C0;&#x67E5;s&#x7684;&#x4E0B;&#x6EA2;&#x5E76;&#x5F39;&#x51FA; */</span> }
     Stack::stack Stack::create()
     {
         <span class="hljs-comment">// &#x627E;&#x4E00;&#x4E2A;&#x672A;&#x4F7F;&#x7528;&#x7684;Rep, &#x5C06;&#x5B83;&#x6807;&#x8BB0;&#x4E3A;&#x5DF2;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x5C06;&#x5B83;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x5F15;&#x7528;</span>
     }
-    <span class="hljs-keyword">void</span> Stack::destroy(stack s) { <span class="hljs-comment">/* &#x6807;&#x8BB0;s&#x4E3A;&#x672A;&#x4F7F;&#x7528;&#x7684; */</span> }
+    <span class="hljs-keyword">void</span> Stack::destroy(Stack::stack s) { <span class="hljs-comment">/* &#x6807;&#x8BB0;s&#x4E3A;&#x672A;&#x4F7F;&#x7528;&#x7684; */</span> }
 </code></pre>
 <p>&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x91CC;&#x505A;&#x7684;&#x5C31;&#x662F;&#x56F4;&#x7ED5;&#x7740;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x7C7B;&#x578B;&#x5305;&#x88C5;&#x8D77;&#x4E00;&#x7EC4;&#x754C;&#x9762;&#x51FD;&#x6570;&#x3002;&#x6240;&#x505A;&#x7684;&#x7ED3;&#x679C;&#x5F97;&#x5230;&#x7684;&#x201C;&#x5806;&#x6808;&#x7C7B;&#x578B;&#x201D;&#x5177;&#x6709;&#x600E;&#x6837;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x90E8;&#x5206;&#x5728;&#x4E8E;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x5B9A;&#x4E49;&#x8FD9;&#x4E9B;&#x754C;&#x9762;&#x51FD;&#x6570;&#xFF0C;&#x90E8;&#x5206;&#x5728;&#x4E8E;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x5C06;Stack&#x7684;&#x8868;&#x793A;&#x5C55;&#x793A;&#x7ED9;&#x5B83;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x90E8;&#x5206;&#x5728;&#x4E8E;&#x8FD9;&#x4E2A;&#x8868;&#x793A;&#x672C;&#x8EAB;&#x7684;&#x8BBE;&#x8BA1;&#x60C5;&#x51B5;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x8FD9;&#x79CD;&#x505A;&#x6CD5;&#x5E38;&#x5E38;&#x4E0D;&#x662F;&#x6700;&#x7406;&#x60F3;&#x7684;&#x3002;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x95EE;&#x9898;&#x5C31;&#x662F;&#xFF0C;&#x8FD9;&#x91CC;&#x7ED9;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x201C;&#x5047;&#x7C7B;&#x578B;&#x201D;&#x7684;&#x8868;&#x793A;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x56E0;&#x4E3A;&#x8868;&#x793A;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x800C;&#x51FA;&#x73B0;&#x5F88;&#x5927;&#x53D8;&#x5316;---&#x800C;&#x4E0E;&#x6B64;&#x540C;&#x65F6;&#xFF0C;&#x53C8;&#x5E94;&#x8BE5;&#x5C06;&#x7528;&#x6237;&#x9694;&#x79BB;&#x4E8E;&#x8FD9;&#x4E00;&#x8868;&#x793A;&#x4E4B;&#x5916;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x91C7;&#x7528;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x66F4;&#x7CBE;&#x81F4;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x53BB;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5806;&#x6808;&#xFF0C;&#x90A3;&#x4E48;Stack::stack&#x7684;&#x8868;&#x793A;&#x7C7B;&#x578B;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x66F4;&#x6839;&#x672C;&#x7684;&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x901A;&#x8FC7;&#x6A21;&#x5757;&#x5B9E;&#x73B0;&#x7684;&#x8FD9;&#x79CD;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x4EEC;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x5728;&#x884C;&#x4E3A;&#x4E0A;&#xFF0C;&#x5E76;&#x4E0D;&#x50CF;&#x5185;&#x90E8;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x5B83;&#x4EEC;&#x5F97;&#x5230;&#x7684;&#x652F;&#x6301;&#x4E5F;&#x4E0E;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#xFF0C;&#x800C;&#x4E14;&#x5B9E;&#x9645;&#x4E0A;&#x66F4;&#x5C11;&#x4E00;&#x4E9B;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;Stack::Rep&#x80FD;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x671F;&#x95F4;&#x7531;Stack::create()&#x548C;Stack::destroy()&#x63A7;&#x5236;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7531;&#x666E;&#x904D;&#x6027;&#x7684;&#x8BED;&#x8A00;&#x89C4;&#x5219;&#x63A7;&#x5236;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x505A;&#x6CD5;&#x5E38;&#x5E38;&#x4E0D;&#x662F;&#x6700;&#x7406;&#x60F3;&#x7684;&#x3002;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x95EE;&#x9898;&#x5C31;&#x662F;&#xFF0C;&#x8FD9;&#x91CC;&#x7ED9;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x201C;&#x5047;&#x7C7B;&#x578B;&#x201D;&#x7684;&#x8868;&#x793A;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x56E0;&#x4E3A;&#x8868;&#x793A;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#x800C;&#x51FA;&#x73B0;&#x5F88;&#x5927;&#x53D8;&#x5316;---&#x800C;&#x4E0E;&#x6B64;&#x540C;&#x65F6;&#xFF0C;&#x53C8;&#x5E94;&#x8BE5;&#x5C06;&#x7528;&#x6237;&#x9694;&#x79BB;&#x4E8E;&#x8FD9;&#x4E00;&#x8868;&#x793A;&#x4E4B;&#x5916;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x91C7;&#x7528;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x66F4;&#x7CBE;&#x81F4;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x53BB;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5806;&#x6808;&#xFF0C;&#x90A3;&#x4E48;<code>Stack::stack</code> &#x7684;&#x8868;&#x793A;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x66F4;&#x6839;&#x672C;&#x7684;&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x901A;&#x8FC7;&#x6A21;&#x5757;&#x5B9E;&#x73B0;&#x7684;&#x8FD9;&#x79CD;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x4EEC;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x5728;&#x884C;&#x4E3A;&#x4E0A;&#xFF0C;&#x5E76;&#x4E0D;&#x50CF;&#x5185;&#x90E8;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x5B83;&#x4EEC;&#x5F97;&#x5230;&#x7684;&#x652F;&#x6301;&#x4E5F;&#x4E0E;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#x4E0D;&#x540C;&#xFF0C;&#x800C;&#x4E14;&#x5B9E;&#x9645;&#x4E0A;&#x66F4;&#x5C11;&#x4E00;&#x4E9B;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E00;&#x4E2A; <code>Stack::Rep</code> &#x80FD;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x671F;&#x95F4;&#x7531; <code>Stack::create()</code> &#x548C; <code>Stack::destroy()</code> &#x63A7;&#x5236;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7531;&#x666E;&#x904D;&#x6027;&#x7684;&#x8BED;&#x8A00;&#x89C4;&#x5219;&#x63A7;&#x5236;&#x3002;</p>
+<hr>
+<p><strong>&#x4EE3;&#x7801;</strong> (edit by shenjun)&#xFF1A;</p>
+<pre><code class="lang-javascript">    namespace Stack        <span class="hljs-comment">// &#x754C;&#x9762;</span>
+    {
+        struct Rep;                <span class="hljs-comment">// &#x58F0;&#x660E;</span>
+        typedef Rep&amp; stack;
+
+        stack create();
+        <span class="hljs-keyword">void</span> destroy(stack s);
+
+        <span class="hljs-keyword">void</span> push(stack s, char c);
+        char pop(stack s);
+        <span class="hljs-keyword">void</span> show(stack s);
+    }
+
+    struct Bad_pop{};
+    struct Bad_push{};
+
+    struct Overflow{};
+
+    <span class="hljs-keyword">void</span> f()
+    {
+        Stack::stack s1 = Stack::create();
+        Stack::stack s2 = Stack::create();
+
+        Stack::push(s1, <span class="hljs-string">&apos;c&apos;</span>);
+        Stack::push(s2, <span class="hljs-string">&apos;k&apos;</span>);
+
+        <span class="hljs-comment">/*if (Stack::pop(s1) != &apos;c&apos;) throw Bad_pop();
+        if (Stack::pop(s2) != &apos;k&apos;) throw Bad_pop();*/</span>
+
+        Stack::push(s1, <span class="hljs-string">&apos;a&apos;</span>);
+        Stack::push(s1, <span class="hljs-string">&apos;b&apos;</span>);
+
+        Stack::push(s2, <span class="hljs-string">&apos;e&apos;</span>);
+        Stack::push(s2, <span class="hljs-string">&apos;f&apos;</span>);
+        Stack::push(s2, <span class="hljs-string">&apos;k&apos;</span>);
+
+        Stack::pop(s2);
+
+        Stack::show(s1);
+        Stack::show(s2);
+
+        Stack::destroy(s1);
+        Stack::destroy(s2);
+    }
+
+    namespace Stack        <span class="hljs-comment">// &#x5B9E;&#x73B0;</span>
+    {
+        <span class="hljs-keyword">const</span> int max_size = <span class="hljs-number">200</span>;
+
+        struct Rep        <span class="hljs-comment">// &#x5B9A;&#x4E49;</span>
+        {
+            char v[max_size];
+            int top;
+            int index;    <span class="hljs-comment">// &#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x5806;&#x6808;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7D22;&#x5F15;&#x503C;&#xFF0C;&#x4EE5;&#x4FBF;&#x6839;&#x636E;&#x8BE5;&#x7D22;&#x5F15;&#x503C; destroy</span>
+        };
+
+        <span class="hljs-keyword">const</span> int max = <span class="hljs-number">16</span>;            <span class="hljs-comment">// &#x6700;&#x5927;&#x5806;&#x6808;&#x6570;</span>
+        Rep stacks[max];            <span class="hljs-comment">// &#x9884;&#x5206;&#x914D;&#x7684;&#x5806;&#x6808;</span>
+        bool used[max];                <span class="hljs-comment">// &#x5982;&#x679C;stack[i]&#x5728;&#x4F7F;&#x7528;&#xFF0C;&#x5219;used[i]&#x4E3A;true</span>
+    }
+
+    <span class="hljs-keyword">void</span> Stack::push(Stack::stack s, char c) 
+    {
+        <span class="hljs-comment">/* &#x68C0;&#x67E5;s&#x7684;&#x4E0A;&#x6EA2;&#x5E76;&#x538B;&#x5165;c */</span>
+        <span class="hljs-keyword">if</span> (s.top == max_size) <span class="hljs-keyword">throw</span> Bad_push();
+
+        s.v[s.top] = c;
+        ++s.top;
+    }
+
+    char Stack::pop(Stack::stack s)
+    {
+        <span class="hljs-comment">/* &#x68C0;&#x67E5;s&#x7684;&#x4E0B;&#x6EA2;&#x5E76;&#x5F39;&#x51FA; */</span>
+        <span class="hljs-keyword">if</span> (s.top == <span class="hljs-number">0</span>) <span class="hljs-keyword">throw</span> Bad_pop();
+        --s.top;
+        <span class="hljs-keyword">return</span> s.v[s.top];
+    }
+
+    Stack::stack Stack::create()
+    {
+        <span class="hljs-comment">// &#x627E;&#x5230;&#x4E00;&#x4E2A;&#x672A;&#x4F7F;&#x7528;&#x7684;Rep&#xFF0C;&#x5C06;&#x5B83;&#x6807;&#x8BB0;&#x4E3A;&#x5DF2;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x5C06;&#x5B83;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x5F15;&#x7528;</span>
+        int index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (Stack::used[index] &amp;&amp; index &lt; Stack::max)
+        {
+            index++;
+        }
+
+        <span class="hljs-keyword">if</span> (index == Stack::max) <span class="hljs-keyword">throw</span> Overflow();
+
+        Stack::used[index] = <span class="hljs-literal">true</span>;        <span class="hljs-comment">// &#x4F7F;&#x7528;&#x8BE5;&#x5806;&#x6808;&#xFF0C;&#x6807;&#x8BB0;&#x4E3A;true</span>
+        Stack::stacks[index].top = <span class="hljs-number">0</span>;
+        Stack::stacks[index].index = index;
+        <span class="hljs-keyword">return</span> Stack::stacks[index];
+    }
+
+    <span class="hljs-keyword">void</span> Stack::destroy(Stack::stack s)
+    {
+        <span class="hljs-comment">// &#x6807;&#x8BB0;s&#x4E3A;&#x672A;&#x4F7F;&#x7528;&#x7684;</span>
+        Stack::used[s.index] = <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-keyword">void</span> Stack::show(Stack::stack s)
+    {
+        <span class="hljs-keyword">for</span> (size_t i = <span class="hljs-number">0</span>; i &lt; s.top; i++)
+        {
+            printf(<span class="hljs-string">&quot;%c&quot;</span>, s.v[i]);
+        }
+        printf(<span class="hljs-string">&quot;\n&quot;</span>);
+    }
+</code></pre>
 <p>&#x1F51A;</p>
 
                                 
@@ -8884,7 +8998,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.5.1 定义类型的模块","level":"1.3.5.1","depth":3,"next":{"title":"2.5.2 用户定义类型","level":"1.3.5.2","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","articles":[]},"previous":{"title":"2.5 数据抽象","level":"1.3.5","depth":2,"path":"第2章 C++概览/第2章 C++概览/2.5.md","ref":"第2章 C++概览/第2章 C++概览/2.5.md","articles":[{"title":"2.5.1 定义类型的模块","level":"1.3.5.1","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.1.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.1.md","articles":[]},{"title":"2.5.2 用户定义类型","level":"1.3.5.2","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","articles":[]},{"title":"2.5.3 具体类型","level":"1.3.5.3","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.3.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.3.md","articles":[]},{"title":"2.5.4 抽象类型","level":"1.3.5.4","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.4.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.4.md","articles":[]},{"title":"2.5.5 虚函数","level":"1.3.5.5","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.5.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.5.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.1.md","mtime":"2017-01-25T07:11:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-05T15:42:32.706Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.5.1 定义类型的模块","level":"1.3.5.1","depth":3,"next":{"title":"2.5.2 用户定义类型","level":"1.3.5.2","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","articles":[]},"previous":{"title":"2.5 数据抽象","level":"1.3.5","depth":2,"path":"第2章 C++概览/第2章 C++概览/2.5.md","ref":"第2章 C++概览/第2章 C++概览/2.5.md","articles":[{"title":"2.5.1 定义类型的模块","level":"1.3.5.1","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.1.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.1.md","articles":[]},{"title":"2.5.2 用户定义类型","level":"1.3.5.2","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","articles":[]},{"title":"2.5.3 具体类型","level":"1.3.5.3","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.3.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.3.md","articles":[]},{"title":"2.5.4 抽象类型","level":"1.3.5.4","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.4.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.4.md","articles":[]},{"title":"2.5.5 虚函数","level":"1.3.5.5","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.5.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.5.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.1.md","mtime":"2017-02-07T10:08:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-09T01:16:52.508Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

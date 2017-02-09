@@ -929,7 +929,7 @@
                 <a href="383-迭代器和io.html">
             
                     
-                    3.8.3 迭代器和I\/O
+                    3.8.3 迭代器和I/O
             
                 </a>
             
@@ -8790,10 +8790,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="&#x4F7F;&#x7528;&#x6210;&#x5458;&#x51FD;&#x6570;&#x7684;&#x7B97;&#x6CD5;">&#x4F7F;&#x7528;&#x6210;&#x5458;&#x51FD;&#x6570;&#x7684;&#x7B97;&#x6CD5;</h2>
-<p>&#x2003;&#x2003;&#x6709;&#x8BB8;&#x591A;&#x7B97;&#x6CD5;&#x90FD;&#x662F;&#x5C06;&#x67D0;&#x4E2A;&#x51FD;&#x6570;&#x5E94;&#x7528;&#x4E8E;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x91CC;&#x7684;&#x5404;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;3.8.4&#x8282;</p>
+<p>&#x6709;&#x8BB8;&#x591A;&#x7B97;&#x6CD5;&#x90FD;&#x662F;&#x5C06;&#x67D0;&#x4E2A;&#x51FD;&#x6570;&#x5E94;&#x7528;&#x4E8E;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x91CC;&#x7684;&#x5404;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;3.8.4&#x8282;</p>
 <pre><code>for_each(ii, eos, record);
-</code></pre><p>&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E2A;&#x4E32;&#x8C03;&#x7528;record()&#x3002;</p>
-<p>&#x2003;&#x2003;&#x6211;&#x4EEC;&#x4E5F;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x5904;&#x7406;&#x6307;&#x9488;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x800C;&#x4E14;&#x5B9E;&#x9645;&#x5E0C;&#x671B;&#x7684;&#x662F;&#x5BF9;&#x6BCF;&#x4E2A;&#x88AB;&#x6307;&#x5411;&#x7684;&#x5143;&#x7D20;&#x8C03;&#x7528;&#x5B83;&#x7684;&#x67D0;&#x4E2A;&#x6210;&#x5458;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5BF9;&#x6307;&#x9488;&#x53BB;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x60F3;&#x5BF9;&#x4E00;&#x4E2A;list&lt; Shape*&gt;&#x91CC;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8C03;&#x7528;&#x6210;&#x5458;&#x51FD;&#x6570;Shape::draw()&#x3002;&#x8981;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x7279;&#x5B9A;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x7B80;&#x5355;&#x5199;&#x51FA;&#x4E00;&#x4E2A;&#x975E;&#x6210;&#x5458;&#x51FD;&#x6570;&#xFF0C;&#x8BA9;&#x5B83;&#x53BB;&#x8C03;&#x7528;&#x6210;&#x5458;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
+</code></pre><p>&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E2A;&#x4E32;&#x8C03;&#x7528; <code>record()</code>&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x5904;&#x7406;&#x6307;&#x9488;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x800C;&#x4E14;&#x5B9E;&#x9645;&#x5E0C;&#x671B;&#x7684;&#x662F;&#x5BF9;&#x6BCF;&#x4E2A;&#x88AB;&#x6307;&#x5411;&#x7684;&#x5143;&#x7D20;&#x8C03;&#x7528;&#x5B83;&#x7684;&#x67D0;&#x4E2A;&#x6210;&#x5458;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5BF9;&#x6307;&#x9488;&#x53BB;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x60F3;&#x5BF9;&#x4E00;&#x4E2A; <code>list&lt;Shape*&gt;</code> &#x91CC;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8C03;&#x7528;&#x6210;&#x5458;&#x51FD;&#x6570; <code>Shape::draw()</code>&#x3002;&#x8981;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x7279;&#x5B9A;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x7B80;&#x5355;&#x5199;&#x51FA;&#x4E00;&#x4E2A;&#x975E;&#x6210;&#x5458;&#x51FD;&#x6570;&#xFF0C;&#x8BA9;&#x5B83;&#x53BB;&#x8C03;&#x7528;&#x6210;&#x5458;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
 <pre><code class="lang-javascript">    <span class="hljs-keyword">void</span> draw(Shape* p)
     {
         p-&gt;draw();
@@ -8807,11 +8807,58 @@
 <p>&#x901A;&#x8FC7;&#x5C06;&#x8FD9;&#x79CD;&#x6280;&#x672F;&#x52A0;&#x4EE5;&#x63A8;&#x5E7F;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x6309;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x5199;&#x51FA;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
 <pre><code class="lang-javascript">    <span class="hljs-keyword">void</span> g(list&lt;Shape*&gt;&amp; sh)
     {
-        for_each(sh.begin(), sh.end(), mem_fun(&amp;Shape::draw));
+        for_each(sh.begin(), sh.end(), mem_fun(&amp;Shape::draw));   <span class="hljs-comment">// #include &lt;functional&gt;</span>
     }
 </code></pre>
-<p>&#x6807;&#x51C6;&#x5E93;&#x6A21;&#x7248;mem_fun()&#xFF08;18.4.4.2&#x8282;&#xFF09;&#x4EE5;&#x4E00;&#x4E2A;&#x5230;&#x6210;&#x5458;&#x51FD;&#x6570;&#x7684;&#x6307;&#x9488;&#xFF08;15.5&#x8282;&#xFF09;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x4EA7;&#x751F;&#x51FA;&#x67D0;&#x79CD;&#x4E1C;&#x897F;&#xFF0C;&#x4F7F;&#x5B83;&#x53EF;&#x4EE5;&#x5BF9;&#x67D0;&#x4E2A;&#x6307;&#x5411;&#x8BE5;&#x6210;&#x5458;&#x6240;&#x5728;&#x7684;&#x7C7B;&#x7684;&#x6307;&#x9488;&#x8C03;&#x7528;&#x3002;&#x8FD9;&#x91CC;mem_fun(&amp;Shape::draw)&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x4EE5;Shape*&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x5C31;&#x662F;Shape::draw()&#x8FD4;&#x56DE;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x8FD9;&#x79CD;mem_fun()&#x673A;&#x5236;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4F7F;&#x5404;&#x79CD;&#x6807;&#x51C6;&#x7B97;&#x6CD5;&#x80FD;&#x591F;&#x88AB;&#x5E94;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x591A;&#x6001;&#x5BF9;&#x8C61;&#x7684;&#x5BB9;&#x5668;&#x3002;</p>
+<p>&#x6807;&#x51C6;&#x5E93;&#x6A21;&#x7248; <code>mem_fun()</code>&#xFF08;18.4.4.2&#x8282;&#xFF09;&#x4EE5;&#x4E00;&#x4E2A;&#x5230;&#x6210;&#x5458;&#x51FD;&#x6570;&#x7684;&#x6307;&#x9488;&#xFF08;15.5&#x8282;&#xFF09;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x4EA7;&#x751F;&#x51FA;&#x67D0;&#x79CD;&#x4E1C;&#x897F;&#xFF0C;&#x4F7F;&#x5B83;&#x53EF;&#x4EE5;&#x5BF9;&#x67D0;&#x4E2A;&#x6307;&#x5411;&#x8BE5;&#x6210;&#x5458;&#x6240;&#x5728;&#x7684;&#x7C7B;&#x7684;&#x6307;&#x9488;&#x8C03;&#x7528;&#x3002;&#x8FD9;&#x91CC; <code>mem_fun(&amp;Shape::draw)</code> &#x7684;&#x7ED3;&#x679C;&#x5C31;&#x4EE5; <code>Shape*</code> &#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x5C31;&#x662F; <code>Shape::draw()</code> &#x8FD4;&#x56DE;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
+<p>&#x8FD9;&#x79CD; <code>mem_fun()</code> &#x673A;&#x5236;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4F7F;&#x5404;&#x79CD;&#x6807;&#x51C6;&#x7B97;&#x6CD5;&#x80FD;&#x591F;&#x88AB;&#x5E94;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x591A;&#x6001;&#x5BF9;&#x8C61;&#x7684;&#x5BB9;&#x5668;&#x3002;</p>
+<hr>
+<p><strong>&#x6CE8;&#xFF08;edit by shenjun&#xFF09;</strong>&#xFF1A;</p>
+<pre><code class="lang-javascript">    #include &lt;iostream&gt;
+    #include &lt;string&gt;
+    #include &lt;typeinfo&gt;
+    using namespace std;
+
+    class Foo
+    {
+        public:
+            void foo(int a)
+            { cout &lt;&lt; a &lt;&lt; endl; }
+
+            static void bar(int a)
+            { cout &lt;&lt; a &lt;&lt; endl; } 
+    };
+
+    int main(int argc, const char *argv[])
+    {
+    //veersion 1      
+        //void (*pFunc)(int) = &amp;Foo::foo;  //&#x9519;&#x8BEF; &#x274C;
+        //Foo::foo &#x7684;&#x5F62;&#x5F0F;&#x53C2;&#x6570;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;&#x4E00;&#x4E2A;&#x9690;&#x5F0F;&#xFF0C;&#x4E00;&#x4E2A;int
+        //void (*pFunc)(int)&#x7684;&#x5F62;&#x5F0F;&#x53C2;&#x6570;&#x53EA;&#x6709;&#x4E00;&#x4E2A;
+        // pFunc(123);
+
+    //version 2    
+        void (*pFunc)(int) = &amp;Foo::bar;//ok
+        pFunc(123);
+        //&#x8FD9;&#x91CC;&#x8868;&#x660E;:static&#x6210;&#x5458;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x6CA1;&#x6709;&#x9690;&#x5F0F;&#x53C2;&#x6570;&#xFF08;&#x672C;&#x5BF9;&#x8C61;&#xFF09;
+
+    //&#x4FEE;&#x6B63;1--&gt;&#x4E3A;&#x5176;&#x52A0;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5373;&#x53EF;    
+        void (Foo::*pFunc2)(int) = &amp;Foo::foo;
+        Foo f;
+        (f.*pFunc2)(12345);
+        Foo *pf = &amp;f ;
+        (pf-&gt;*pFunc2)(123124);
+        return 0;
+    }
+</code></pre>
+<p><strong>mem_fun&#x9002;&#x914D;&#x5668;</strong>&#xFF1A;</p>
+<pre><code>    &#x5934;&#x6587;&#x4EF6;&#xFF1A;&lt;functional&gt;
+</code></pre><p>&#x65E2;&#x7136; <code>foo</code> &#x542B;&#x6709;&#x4E00;&#x4E2A;&#x9690;&#x5F0F;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x80FD;&#x5426;&#x5C06;&#x5176;&#x8F6C;&#x5316;&#x51FA;&#x6765;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x4F7F;&#x7528;STL&#x4E2D;&#x7684; <code>mem_fun</code>&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x51FD;&#x6570;&#x9002;&#x914D;&#x5668;&#x3002;</p>
+<pre><code class="lang-javascript">    Foo f;
+    <span class="hljs-comment">//void (Foo::*)(int)-&gt;void (*)(Foo*,int)</span>
+    (mem_fun(&amp;Foo::foo))(&amp;f,<span class="hljs-number">123</span>);
+</code></pre>
+<p><code>mem_fun</code> &#x7684;&#x5177;&#x4F53;&#x4F5C;&#x7528;&#x662F;&#x4E00;&#x79CD;&#x8F6C;&#x5316;&#x4F5C;&#x7528;&#xFF0C;&#x5C06; <code>void (Foo::)(int)</code><em> &#x7C7B;&#x578B;&#x7684;&#x6210;&#x5458;&#x51FD;&#x6570;&#x6307;&#x9488;&#x8F6C;&#x5316;&#x4E3A; </em><code>void (Foo, int)</code>,&#x540E;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x7531;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x53EF;&#x4EE5;&#x50CF; <code>static</code> &#x6210;&#x5458;&#x51FD;&#x6570;&#x90A3;&#x6837;&#x81EA;&#x7531;&#x8C03;&#x7528;&#x3002;</p>
 <p>&#x1F51A;</p>
 
                                 
@@ -8840,7 +8887,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.8.5 使用成员函数的算法","level":"1.4.8.5","depth":3,"next":{"title":"3.8.6 标准库算法","level":"1.4.8.6","depth":3,"path":"第3章 标准库概览/386-标准库算法.md","ref":"第3章 标准库概览/386-标准库算法.md","articles":[]},"previous":{"title":"3.8.4 遍历和谓词","level":"1.4.8.4","depth":3,"path":"第3章 标准库概览/384-遍历和谓词.md","ref":"第3章 标准库概览/384-遍历和谓词.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第3章 标准库概览/385-使用成员函数的算法.md","mtime":"2017-01-26T05:59:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-05T15:42:32.706Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.8.5 使用成员函数的算法","level":"1.4.8.5","depth":3,"next":{"title":"3.8.6 标准库算法","level":"1.4.8.6","depth":3,"path":"第3章 标准库概览/386-标准库算法.md","ref":"第3章 标准库概览/386-标准库算法.md","articles":[]},"previous":{"title":"3.8.4 遍历和谓词","level":"1.4.8.4","depth":3,"path":"第3章 标准库概览/384-遍历和谓词.md","ref":"第3章 标准库概览/384-遍历和谓词.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第3章 标准库概览/385-使用成员函数的算法.md","mtime":"2017-02-09T00:14:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-09T01:16:52.508Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

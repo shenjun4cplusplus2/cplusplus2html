@@ -929,7 +929,7 @@
                 <a href="383-迭代器和io.html">
             
                     
-                    3.8.3 迭代器和I\/O
+                    3.8.3 迭代器和I/O
             
                 </a>
             
@@ -8790,8 +8790,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="&#x8F93;&#x5165;">&#x8F93;&#x5165;</h2>
-<p>&#x2003;&#x2003;&#x6807;&#x51C6;&#x5E93;&#x4E3A;&#x8F93;&#x5165;&#x63D0;&#x4F9B;&#x4E86;istream&#x3002;&#x4E0E;ostream&#x4E00;&#x6837;&#xFF0C;istream&#x80FD;&#x5904;&#x7406;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#x8868;&#x793A;&#x3002;&#x5B83;&#x4E5F;&#x5F88;&#x5BB9;&#x6613;&#x6269;&#x5145;&#xFF0C;&#x4EE5;&#x4FBF;&#x53BB;&#x5E94;&#x4ED8;&#x5404;&#x79CD;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x8FD0;&#x7B97;&#x7B26; &gt;&gt; (&#x201C;&#x53D6;&#x5165;&#x201D;)&#x88AB;&#x7528;&#x505A;&#x8F93;&#x5165;&#x8FD0;&#x7B97;&#x7B26;&#xFF1B;cin&#x662F;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x6D41;&#x3002;&gt;&gt; &#x53F3;&#x8FB9;&#x8FD0;&#x7B97;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x51B3;&#x5B9A;&#x4E86;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4EC0;&#x4E48;&#x8F93;&#x5165;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FD0;&#x7B97;&#x5BF9;&#x8C61;&#x88AB;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x64CD;&#x4F5C;&#x7684;&#x76EE;&#x6807;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
+<p>&#x2003;&#x2003;&#x6807;&#x51C6;&#x5E93;&#x4E3A;&#x8F93;&#x5165;&#x63D0;&#x4F9B;&#x4E86; <code>istream</code>&#x3002;&#x4E0E; <code>ostream</code> &#x4E00;&#x6837;&#xFF0C;<code>istream</code> &#x80FD;&#x5904;&#x7406;&#x5185;&#x90E8;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#x8868;&#x793A;&#x3002;&#x5B83;&#x4E5F;&#x5F88;&#x5BB9;&#x6613;&#x6269;&#x5145;&#xFF0C;&#x4EE5;&#x4FBF;&#x53BB;&#x5E94;&#x4ED8;&#x5404;&#x79CD;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x2003;&#x2003;&#x8FD0;&#x7B97;&#x7B26; <code>&gt;&gt;</code> (&#x201C;&#x53D6;&#x5165;&#x201D;)&#x88AB;&#x7528;&#x505A;&#x8F93;&#x5165;&#x8FD0;&#x7B97;&#x7B26;&#xFF1B;<code>cin</code> &#x662F;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x6D41;&#x3002;<code>&gt;&gt;</code> &#x53F3;&#x8FB9;&#x8FD0;&#x7B97;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x51B3;&#x5B9A;&#x4E86;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4EC0;&#x4E48;&#x8F93;&#x5165;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FD0;&#x7B97;&#x5BF9;&#x8C61;&#x88AB;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#x64CD;&#x4F5C;&#x7684;&#x76EE;&#x6807;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
 <pre><code class="lang-javascript">    <span class="hljs-keyword">void</span> f()
     {
         int i;
@@ -8801,7 +8801,7 @@
         cin &gt;&gt; d;    <span class="hljs-comment">// &#x628A;&#x4E00;&#x4E2A;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x6570;&#x8BFB;&#x5230;d</span>
     }
 </code></pre>
-<p>&#x4ECE;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x4E00;&#x4E2A;&#x6570;&#xFF0C;&#x4F8B;&#x5982;1234&#xFF0C;&#x653E;&#x5165;&#x6574;&#x578B;&#x53D8;&#x91CF;i&#xFF1B;&#x518D;&#x8BFB;&#x4E00;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x4F8B;&#x5982;12.34e5&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x653E;&#x5165;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x53D8;&#x91CF;d&#x3002;</p>
+<p>&#x4ECE;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x4E00;&#x4E2A;&#x6570;&#xFF0C;&#x4F8B;&#x5982; <code>1234</code>&#xFF0C;&#x653E;&#x5165;&#x6574;&#x578B;&#x53D8;&#x91CF; <code>i</code>&#xFF1B;&#x518D;&#x8BFB;&#x4E00;&#x4E2A;&#x6D6E;&#x70B9;&#x6570;&#xFF0C;&#x4F8B;&#x5982; <code>12.34e5</code>&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x653E;&#x5165;&#x53CC;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x53D8;&#x91CF; <code>d</code>&#x3002;</p>
 <p>&#x2003;&#x2003;&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5B83;&#x6267;&#x884C;&#x4ECE;&#x82F1;&#x5BF8;&#x5230;&#x5398;&#x7C73;&#x4EE5;&#x53CA;&#x4ECE;&#x5398;&#x7C73;&#x5230;&#x82F1;&#x5BF8;&#x7684;&#x8F6C;&#x6362;&#x3002;&#x4F60;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#xFF0C;&#x540E;&#x9762;&#x8DDF;&#x7740;&#x4E00;&#x4E2A;&#x8868;&#x660E;&#x5355;&#x4F4D;&#xFF08;&#x5398;&#x7C73;&#x6216;&#x82F1;&#x5BF8;&#xFF09;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x5C31;&#x4F1A;&#x6309;&#x7167;&#x53E6;&#x4E00;&#x79CD;&#x5355;&#x4F4D;&#x8F93;&#x51FA;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x3002;</p>
 <pre><code class="lang-javascript">    int main()
     {
@@ -8830,25 +8830,25 @@
         cout &lt;&lt; <span class="hljs-keyword">in</span> &lt;&lt; <span class="hljs-string">&quot; in = &quot;</span> &lt;&lt; cm &lt;&lt; <span class="hljs-string">&quot; cm\n&quot;</span>;
     }
 </code></pre>
-<p>&#x8FD9;&#x91CC;&#x7684;switch&#x8BED;&#x53E5;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x7EC4;&#x5E38;&#x91CF;&#x53BB;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x503C;&#x3002;break&#x8BED;&#x53E5;&#x7528;&#x4E8E;&#x8DF3;&#x51FA;switch&#x8BED;&#x53E5;&#x3002;&#x5404;&#x4E2A;&#x5206;&#x60C5;&#x51B5;&#x5E38;&#x91CF;&#x5FC5;&#x987B;&#x4E92;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;default&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x7A0B;&#x5E8F;&#x5458;&#x4E5F;&#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x63D0;&#x4F9B;default&#x3002;</p>
-<p>&#x2003;&#x2003;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x8F93;&#x5165;&#x4E00;&#x7CFB;&#x5217;&#x5B57;&#x7B26;&#x3002;&#x5B8C;&#x6210;&#x8FD9;&#x4EF6;&#x4E8B;&#x7684;&#x4E00;&#x4E2A;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x5C06;&#x5B83;&#x4EEC;&#x8BFB;&#x5165;&#x4E00;&#x4E2A;string&#x91CC;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
+<p>&#x8FD9;&#x91CC;&#x7684; <code>switch</code> &#x8BED;&#x53E5;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x7EC4;&#x5E38;&#x91CF;&#x53BB;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x503C;&#x3002;<code>break</code> &#x8BED;&#x53E5;&#x7528;&#x4E8E;&#x8DF3;&#x51FA; <code>switch</code> &#x8BED;&#x53E5;&#x3002;&#x5404;&#x4E2A;&#x5206;&#x60C5;&#x51B5;&#x5E38;&#x91CF;&#x5FC5;&#x987B;&#x4E92;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;<code>default</code> &#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x7A0B;&#x5E8F;&#x5458;&#x4E5F;&#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x63D0;&#x4F9B; <code>default</code>&#x3002;</p>
+<p>&#x2003;&#x2003;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x8F93;&#x5165;&#x4E00;&#x7CFB;&#x5217;&#x5B57;&#x7B26;&#x3002;&#x5B8C;&#x6210;&#x8FD9;&#x4EF6;&#x4E8B;&#x7684;&#x4E00;&#x4E2A;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x5C06;&#x5B83;&#x4EEC;&#x8BFB;&#x5165;&#x4E00;&#x4E2A; <code>string</code> &#x91CC;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
 <pre><code class="lang-javascript">    int main()
     {
         string str;
         cout &lt;&lt; <span class="hljs-string">&quot;Please enter your name\n&quot;</span>;
-        cin &gt;&gt; str;
+        cin &gt;&gt; str;                            <span class="hljs-comment">// #include &lt;string&gt;</span>
         cout &lt;&lt; <span class="hljs-string">&quot;Hello, &quot;</span> &lt;&lt; str &lt;&lt; <span class="hljs-string">&quot;!\n&quot;</span>;
     }
 </code></pre>
 <p>&#x5982;&#x679C;&#x4F60;&#x952E;&#x5165;</p>
-<pre><code>Eric
+<pre><code>    Eric
 </code></pre><p>&#x56DE;&#x5E94;&#x5C06;&#x662F;</p>
-<pre><code>Hello, Eric!
+<pre><code>    Hello, Eric!
 </code></pre><p>&#x6309;&#x7167;&#x9ED8;&#x8BA4;&#x65B9;&#x5F0F;&#xFF0C;&#x4E00;&#x4E2A;&#x7A7A;&#x767D;&#x5B57;&#x7B26;&#xFF0C;&#x4F8B;&#x5982;&#x7A7A;&#x683C;&#x7B26;&#xFF0C;&#x5C06;&#x7ED3;&#x675F;&#x4E00;&#x6B21;&#x8F93;&#x5165;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x952E;&#x5165;</p>
-<pre><code>Eric Bloodaxe
+<pre><code>    Eric Bloodaxe
 </code></pre><p>&#x5373;&#x4F7F;&#x7A7A;&#x683C;&#x540E;&#x7684;&#x8F93;&#x5165;&#x597D;&#x50CF;&#x662F;York&#x7684;&#x90A3;&#x4E2A;&#x8D85;&#x80A5;&#x7684;&#x56FD;&#x738B;&#xFF0C;&#x56DE;&#x7B54;&#x5C06;&#x4ECD;&#x7136;&#x662F;</p>
-<pre><code>Hello, Eric!
-</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x51FD;&#x6570;getline()&#x8BFB;&#x5165;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x884C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
+<pre><code>    Hello, Eric!
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x51FD;&#x6570; <code>getline()</code> &#x8BFB;&#x5165;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x884C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
 <pre><code class="lang-javascript">    int main()
     {
         string str;
@@ -8858,9 +8858,9 @@
     }
 </code></pre>
 <p>&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x8F93;&#x5165;</p>
-<pre><code>Eric Bloodaxe
+<pre><code>    Eric Bloodaxe
 </code></pre><p>&#x5C31;&#x80FD;&#x5C06;&#x4EA7;&#x751F;&#x6240;&#x9884;&#x671F;&#x7684;&#x8F93;&#x51FA;</p>
-<pre><code>Hello, Eric Bloodaxe!
+<pre><code>    Hello, Eric Bloodaxe!
 </code></pre><p>&#x8FD9;&#x79CD;&#x6807;&#x51C6;&#x5B57;&#x7B26;&#x4E32;&#x6709;&#x7740;&#x5F88;&#x597D;&#x7684;&#x6027;&#x8D28;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x6269;&#x5C55;&#x4EE5;&#x5B58;&#x653E;&#x4F60;&#x653E;&#x8FDB;&#x53BB;&#x7684;&#x4EFB;&#x610F;&#x591A;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x9001;&#x5165;&#x4E86;&#x51E0;&#x767E;&#x4E07;&#x4E2A;&#x5206;&#x53F7;&#xFF0C;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E5F;&#x5C06;&#x9001;&#x56DE;&#x4F60;&#x6210;&#x9875;&#x6210;&#x9875;&#x7684;&#x5206;&#x53F7;---&#x9664;&#x975E;&#x4F60;&#x7684;&#x673A;&#x5668;&#x6216;&#x8005;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5728;&#x6B64;&#x4E4B;&#x524D;&#x7528;&#x5B8C;&#x4E86;&#x67D0;&#x79CD;&#x5173;&#x952E;&#x6027;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
 <p>&#x1F51A;</p>
 
@@ -8890,7 +8890,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.6 输入","level":"1.4.6","depth":2,"next":{"title":"3.7 容器","level":"1.4.7","depth":2,"path":"第3章 标准库概览/3.7.md","ref":"第3章 标准库概览/3.7.md","articles":[{"title":"3.7.1 向量---vector","level":"1.4.7.1","depth":3,"path":"第3章 标准库概览/3.7.1-vector.md","ref":"第3章 标准库概览/3.7.1-vector.md","articles":[]},{"title":"3.7.2 范围检查","level":"1.4.7.2","depth":3,"path":"第3章 标准库概览/3.7.2.md","ref":"第3章 标准库概览/3.7.2.md","articles":[]},{"title":"3.7.3 表---list","level":"1.4.7.3","depth":3,"path":"第3章 标准库概览/3.7.3-list.md","ref":"第3章 标准库概览/3.7.3-list.md","articles":[]},{"title":"3.7.4 映射---map","level":"1.4.7.4","depth":3,"path":"第3章 标准库概览/374-映射---map.md","ref":"第3章 标准库概览/374-映射---map.md","articles":[]},{"title":"3.7.5 标准容器","level":"1.4.7.5","depth":3,"path":"第3章 标准库概览/375-标准容器.md","ref":"第3章 标准库概览/375-标准容器.md","articles":[]}]},"previous":{"title":"3.5.1 C风格的字符串","level":"1.4.5.1","depth":3,"path":"第3章 标准库概览/3.5/3.5.1-c.md","ref":"第3章 标准库概览/3.5/3.5.1-c.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第3章 标准库概览/3.6.md","mtime":"2017-01-25T13:42:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-05T15:42:32.706Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.6 输入","level":"1.4.6","depth":2,"next":{"title":"3.7 容器","level":"1.4.7","depth":2,"path":"第3章 标准库概览/3.7.md","ref":"第3章 标准库概览/3.7.md","articles":[{"title":"3.7.1 向量---vector","level":"1.4.7.1","depth":3,"path":"第3章 标准库概览/3.7.1-vector.md","ref":"第3章 标准库概览/3.7.1-vector.md","articles":[]},{"title":"3.7.2 范围检查","level":"1.4.7.2","depth":3,"path":"第3章 标准库概览/3.7.2.md","ref":"第3章 标准库概览/3.7.2.md","articles":[]},{"title":"3.7.3 表---list","level":"1.4.7.3","depth":3,"path":"第3章 标准库概览/3.7.3-list.md","ref":"第3章 标准库概览/3.7.3-list.md","articles":[]},{"title":"3.7.4 映射---map","level":"1.4.7.4","depth":3,"path":"第3章 标准库概览/374-映射---map.md","ref":"第3章 标准库概览/374-映射---map.md","articles":[]},{"title":"3.7.5 标准容器","level":"1.4.7.5","depth":3,"path":"第3章 标准库概览/375-标准容器.md","ref":"第3章 标准库概览/375-标准容器.md","articles":[]}]},"previous":{"title":"3.5.1 C风格的字符串","level":"1.4.5.1","depth":3,"path":"第3章 标准库概览/3.5/3.5.1-c.md","ref":"第3章 标准库概览/3.5/3.5.1-c.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第3章 标准库概览/3.6.md","mtime":"2017-02-07T12:37:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-09T01:16:52.508Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

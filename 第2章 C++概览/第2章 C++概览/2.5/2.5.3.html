@@ -929,7 +929,7 @@
                 <a href="../../../第3章 标准库概览/383-迭代器和io.html">
             
                     
-                    3.8.3 迭代器和I\/O
+                    3.8.3 迭代器和I/O
             
                 </a>
             
@@ -8790,16 +8790,16 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="&#x5177;&#x4F53;&#x7C7B;&#x578B;">&#x5177;&#x4F53;&#x7C7B;&#x578B;</h2>
-<p>&#x2003;&#x2003;&#x53EF;&#x4EE5;&#x8BBE;&#x8BA1;&#x51FA;&#x8BB8;&#x591A;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x53BB;&#x6EE1;&#x8DB3;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x9700;&#x6C42;&#x3002;&#x73B0;&#x5728;&#x6765;&#x8003;&#x8651;&#x4E00;&#x4E2A;&#x9075;&#x5FAA;complex&#x90A3;&#x79CD;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#x7684;&#x7528;&#x6237;&#x5B9A;&#x4E49;Stack&#x7C7B;&#x578B;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x66F4;&#x5B9E;&#x9645;&#x4E00;&#x70B9;&#xFF0C;&#x8FD9;&#x4E2A;Stack&#x7C7B;&#x578B;&#x7684;&#x5B9A;&#x4E49;&#x4EE5;&#x5B83;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<p>&#x2003;&#x2003;&#x53EF;&#x4EE5;&#x8BBE;&#x8BA1;&#x51FA;&#x8BB8;&#x591A;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x53BB;&#x6EE1;&#x8DB3;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x9700;&#x6C42;&#x3002;&#x73B0;&#x5728;&#x6765;&#x8003;&#x8651;&#x4E00;&#x4E2A;&#x9075;&#x5FAA; complex &#x90A3;&#x79CD;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;&#x7684;&#x7528;&#x6237;&#x5B9A;&#x4E49; Stack &#x7C7B;&#x578B;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x66F4;&#x5B9E;&#x9645;&#x4E00;&#x70B9;&#xFF0C;&#x8FD9;&#x4E2A; Stack &#x7C7B;&#x578B;&#x7684;&#x5B9A;&#x4E49;&#x4EE5;&#x5B83;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
 <pre><code class="lang-javascript">    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stack</span>
     </span>{
         char* v;
         int top;
         int max_size;
     public:
-        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Underflow</span>()</span>;    <span class="hljs-comment">// &#x7528;&#x505A;&#x5F02;&#x5E38;</span>
-        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Overflow</span>()</span>;     <span class="hljs-comment">// &#x7528;&#x505A;&#x5F02;&#x5E38;</span>
-        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bad_size</span>()</span>;     <span class="hljs-comment">// &#x7528;&#x505A;&#x5F02;&#x5E38;</span>
+        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Underflow</span></span>{};    <span class="hljs-comment">// &#x7528;&#x505A;&#x5F02;&#x5E38;</span>
+        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Overflow</span></span>{};     <span class="hljs-comment">// &#x7528;&#x505A;&#x5F02;&#x5E38;</span>
+        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bad_size</span></span>{};     <span class="hljs-comment">// &#x7528;&#x505A;&#x5F02;&#x5E38;</span>
 
         Stack(int s);         <span class="hljs-comment">// &#x6784;&#x9020;&#x51FD;&#x6570;</span>
         ~Stack();             <span class="hljs-comment">// &#x6790;&#x6784;&#x51FD;&#x6570;</span>
@@ -8808,7 +8808,7 @@
         char pop();
     };
 </code></pre>
-<p>&#x6784;&#x9020;&#x51FD;&#x6570;Stack(int)&#x5C06;&#x5728;&#x5EFA;&#x7ACB;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x65F6;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5B83;&#x5904;&#x7406;&#x521D;&#x59CB;&#x5316;&#x95EE;&#x9898;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x7C7B;&#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x51FA;&#x4E86;&#x5176;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x67D0;&#x4E9B;&#x6E05;&#x7406;&#x65F6;&#xFF0C;&#x5C31;&#x5E94;&#x8BE5;&#x53BB;&#x58F0;&#x660E;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x5E94;&#x7269;---&#x5B83;&#x88AB;&#x79F0;&#x4E3A;&#x6790;&#x6784;&#x51FD;&#x6570;&#xFF1A;</p>
+<p><strong>&#x6784;&#x9020;&#x51FD;&#x6570;</strong> <code>Stack(int)</code> &#x5C06;&#x5728;&#x5EFA;&#x7ACB;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x65F6;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5B83;&#x5904;&#x7406;&#x521D;&#x59CB;&#x5316;&#x95EE;&#x9898;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x7C7B;&#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x51FA;&#x4E86;&#x5176;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x67D0;&#x4E9B;&#x6E05;&#x7406;&#x65F6;&#xFF0C;&#x5C31;&#x5E94;&#x8BE5;&#x53BB;&#x58F0;&#x660E;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x5E94;&#x7269;---&#x5B83;&#x88AB;&#x79F0;&#x4E3A;<strong>&#x6790;&#x6784;&#x51FD;&#x6570;</strong>&#xFF1A;</p>
 <pre><code class="lang-javascript">    Stack::Stack(int s)    <span class="hljs-comment">// &#x6784;&#x9020;&#x51FD;&#x6570;</span>
     {
         top = <span class="hljs-number">0</span>;
@@ -8822,7 +8822,7 @@
         <span class="hljs-keyword">delete</span> [] v;        <span class="hljs-comment">// &#x91CA;&#x653E;&#x5143;&#x7D20;&#x5B58;&#x50A8;&#xFF0C;&#x4F7F;&#x7A7A;&#x95F4;&#x53EF;&#x80FD;&#x91CD;&#x65B0;&#x4F7F;&#x7528;</span>
     }
 </code></pre>
-<p>&#x6784;&#x9020;&#x51FD;&#x6570;&#x521D;&#x59CB;&#x5316;&#x65B0;&#x7684;Stack&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#x65F6;&#xFF0C;&#x5B83;&#x7528;new&#x8FD0;&#x7B97;&#x7B26;&#x4ECE;&#x81EA;&#x7531;&#x7A7A;&#x95F4;&#xFF08;&#x4E5F;&#x79F0;&#x4E3A;&#x5806;&#x6216;&#x52A8;&#x6001;&#x5B58;&#x50A8;&#xFF09;&#x5206;&#x914D;&#x4E00;&#x4E9B;&#x5B58;&#x50A8;&#x3002;&#x6790;&#x6784;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x6E05;&#x7406;&#xFF0C;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x91CA;&#x653E;&#x8FD9;&#x4E9B;&#x5B58;&#x50A8;&#x3002;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x90FD;&#x80FD;&#x5728;&#x65E0;&#x9700;Stack&#x7684;&#x7528;&#x6237;&#x5E72;&#x9884;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5B8C;&#x6210;&#x3002;&#x6709;&#x5173;&#x7528;&#x6237;&#x53EA;&#x8981;&#x7B80;&#x5355;&#x5730;&#x5EFA;&#x7ACB;&#x548C;&#x4F7F;&#x7528;Stack&#xFF0C;&#x5C31;&#x50CF;&#x5B83;&#x4EEC;&#x662F;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x4F3C;&#x7684;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
+<p>&#x6784;&#x9020;&#x51FD;&#x6570;&#x521D;&#x59CB;&#x5316;&#x65B0;&#x7684; Stack &#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#x65F6;&#xFF0C;&#x5B83;&#x7528; <code>new</code> &#x8FD0;&#x7B97;&#x7B26;&#x4ECE;&#x81EA;&#x7531;&#x7A7A;&#x95F4;&#xFF08;&#x4E5F;&#x79F0;&#x4E3A;&#x5806;&#x6216;&#x52A8;&#x6001;&#x5B58;&#x50A8;&#xFF09;&#x5206;&#x914D;&#x4E00;&#x4E9B;&#x5B58;&#x50A8;&#x3002;&#x6790;&#x6784;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x6E05;&#x7406;&#xFF0C;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x91CA;&#x653E;&#x8FD9;&#x4E9B;&#x5B58;&#x50A8;&#x3002;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x90FD;&#x80FD;&#x5728;&#x65E0;&#x9700; Stack &#x7684;&#x7528;&#x6237;&#x5E72;&#x9884;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5B8C;&#x6210;&#x3002;&#x6709;&#x5173;&#x7528;&#x6237;&#x53EA;&#x8981;&#x7B80;&#x5355;&#x5730;&#x5EFA;&#x7ACB;&#x548C;&#x4F7F;&#x7528; Stack&#xFF0C;&#x5C31;&#x50CF;&#x5B83;&#x4EEC;&#x662F;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x4F3C;&#x7684;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
 <pre><code class="lang-javascript">    Stack s_var1(<span class="hljs-number">10</span>);              <span class="hljs-comment">// &#x5177;&#x6709;10&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5168;&#x5C40;&#x5806;&#x6808;</span>
 
     <span class="hljs-keyword">void</span> f(Stack&amp; s_ref, int i)    <span class="hljs-comment">// &#x5BF9;Stack&#x7684;&#x5F15;&#x7528;</span>
@@ -8837,8 +8837,8 @@
         <span class="hljs-comment">// ...</span>
     }
 </code></pre>
-<p>&#x8FD9;&#x4E2A;Stack&#x7C7B;&#x578B;&#x9075;&#x5FAA;&#x4E0E;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#xFF08;&#x4F8B;&#x5982;int&#x548C;char&#x7B49;&#xFF09;&#x540C;&#x6837;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x5305;&#x62EC;&#x547D;&#x540D;&#x3001;&#x4F5C;&#x7528;&#x57DF;&#x3001;&#x5B58;&#x50A8;&#x5206;&#x914D;&#x3001;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#x3001;&#x590D;&#x5236;&#x7B49;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x5F53;&#x7136;&#xFF0C;&#x6210;&#x5458;&#x51FD;&#x6570;push()&#x548C;pop()&#x4E5F;&#x5FC5;&#x987B;&#x5728;&#x67D0;&#x4E2A;&#x5730;&#x65B9;&#x7ED9;&#x4E88;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<p>&#x8FD9;&#x4E2A;Stack&#x7C7B;&#x578B;&#x9075;&#x5FAA;&#x4E0E;&#x5185;&#x90E8;&#x7C7B;&#x578B;&#xFF08;&#x4F8B;&#x5982; <code>int</code> &#x548C; <code>char</code> &#x7B49;&#xFF09;&#x540C;&#x6837;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x5305;&#x62EC;&#x547D;&#x540D;&#x3001;&#x4F5C;&#x7528;&#x57DF;&#x3001;&#x5B58;&#x50A8;&#x5206;&#x914D;&#x3001;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#x3001;&#x590D;&#x5236;&#x7B49;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x6210;&#x5458;&#x51FD;&#x6570; <code>push()</code> &#x548C; <code>pop()</code> &#x4E5F;&#x5FC5;&#x987B;&#x5728;&#x67D0;&#x4E2A;&#x5730;&#x65B9;&#x7ED9;&#x4E88;&#x5B9A;&#x4E49;&#xFF1A;</p>
 <pre><code class="lang-javascript">    <span class="hljs-keyword">void</span> Stack::push(char c)
     {
         <span class="hljs-keyword">if</span>(top == max_size) <span class="hljs-keyword">throw</span> Overflow();
@@ -8853,7 +8853,7 @@
         <span class="hljs-keyword">return</span> v[top]; 
     }
 </code></pre>
-<p>&#x50CF;complex&#x548C;Stack&#x8FD9;&#x6837;&#x7684;&#x7C7B;&#x578B;&#x79F0;&#x4E3A;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x4EEC;&#x4E0E;&#x62BD;&#x8C61;&#x7C7B;&#x578B;&#x76F8;&#x5BF9;&#x5E94;&#x3002;&#x62BD;&#x8C61;&#x7C7B;&#x578B;&#x7684;&#x754C;&#x9762;&#x80FD;&#x66F4;&#x5B8C;&#x5168;&#x5730;&#x5C06;&#x7528;&#x6237;&#x4E0E;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#x9694;&#x79BB;&#x3002;</p>
+<p>&#x50CF; complex &#x548C; Stack &#x8FD9;&#x6837;&#x7684;&#x7C7B;&#x578B;&#x79F0;&#x4E3A;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x4EEC;&#x4E0E;&#x62BD;&#x8C61;&#x7C7B;&#x578B;&#x76F8;&#x5BF9;&#x5E94;&#x3002;&#x62BD;&#x8C61;&#x7C7B;&#x578B;&#x7684;&#x754C;&#x9762;&#x80FD;&#x66F4;&#x5B8C;&#x5168;&#x5730;&#x5C06;&#x7528;&#x6237;&#x4E0E;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#x9694;&#x79BB;&#x3002;</p>
 <p>&#x1F51A;</p>
 
                                 
@@ -8882,7 +8882,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.5.3 具体类型","level":"1.3.5.3","depth":3,"next":{"title":"2.5.4 抽象类型","level":"1.3.5.4","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.4.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.4.md","articles":[]},"previous":{"title":"2.5.2 用户定义类型","level":"1.3.5.2","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.3.md","mtime":"2017-01-25T08:14:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-05T15:42:32.706Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.5.3 具体类型","level":"1.3.5.3","depth":3,"next":{"title":"2.5.4 抽象类型","level":"1.3.5.4","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.4.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.4.md","articles":[]},"previous":{"title":"2.5.2 用户定义类型","level":"1.3.5.2","depth":3,"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","ref":"第2章 C++概览/第2章 C++概览/2.5/2.5.2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第2章 C++概览/第2章 C++概览/2.5/2.5.3.md","mtime":"2017-02-07T10:07:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-09T01:16:52.508Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

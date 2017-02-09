@@ -929,7 +929,7 @@
                 <a href="383-迭代器和io.html">
             
                     
-                    3.8.3 迭代器和I\/O
+                    3.8.3 迭代器和I/O
             
                 </a>
             
@@ -8790,16 +8790,16 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="&#x8303;&#x56F4;&#x68C0;&#x67E5;">&#x8303;&#x56F4;&#x68C0;&#x67E5;</h2>
-<p>&#x2003;&#x2003;&#x6309;&#x7167;&#x9ED8;&#x8BA4;&#x65B9;&#x5F0F;&#xFF0C;&#x6807;&#x51C6;&#x5E93;&#x7684;vector&#x5E76;&#x4E0D;&#x63D0;&#x4F9B;&#x5BF9;&#x533A;&#x95F4;&#x8303;&#x56F4;&#x7684;&#x68C0;&#x67E5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
+<p>&#x6309;&#x7167;&#x9ED8;&#x8BA4;&#x65B9;&#x5F0F;&#xFF0C;&#x6807;&#x51C6;&#x5E93;&#x7684; <code>vector</code> &#x5E76;&#x4E0D;&#x63D0;&#x4F9B;&#x5BF9;&#x533A;&#x95F4;&#x8303;&#x56F4;&#x7684;&#x68C0;&#x67E5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
 <pre><code class="lang-javascript">    <span class="hljs-keyword">void</span> f()
     {
         int i = phone_book[<span class="hljs-number">1001</span>].number;    <span class="hljs-comment">// 1001&#x8D85;&#x51FA;&#x4E86;&#x533A;&#x95F4;&#x8303;&#x56F4;</span>
         <span class="hljs-comment">// ...</span>
     }
 </code></pre>
-<p>&#x8FD9;&#x4E2A;&#x521D;&#x59CB;&#x5316;&#x5F88;&#x53EF;&#x80FD;&#x5C06;&#x67D0;&#x4E2A;&#x968F;&#x673A;&#x7684;&#x503C;&#x8D4B;&#x7ED9;i&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;&#x8FD9;&#x5F53;&#x7136;&#x4E0D;&#x662F;&#x4EBA;&#x4EEC;&#x6240;&#x5E0C;&#x671B;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x5728;&#x4E0B;&#x9762;&#x5404;&#x7AE0;&#x91CC;&#x8981;&#x4F7F;&#x7528;vector&#x7684;&#x4E00;&#x4E2A;&#x7ECF;&#x8FC7;&#x7B80;&#x5355;&#x4FEE;&#x8BA2;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5B83;&#x5E26;&#x6709;&#x533A;&#x95F4;&#x8303;&#x56F4;&#x68C0;&#x67E5;&#xFF0C;&#x79F0;&#x4E3A;Vec&#x3002;&#x4E00;&#x4E2A;Vec&#x5C31;&#x50CF;&#x662F;&#x4E00;&#x4E2A;vector&#xFF0C;&#x53EA;&#x662F;&#x5F53;&#x67D0;&#x4E2A;&#x4E0B;&#x6807;&#x8D85;&#x51FA;&#x4E86;&#x533A;&#x95F4;&#x8303;&#x56F4;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;out_of_range&#x7684;&#x5F02;&#x5E38;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x5B9E;&#x73B0;&#x50CF;Vec&#x8FD9;&#x6837;&#x7684;&#x7C7B;&#x578B;&#x4EE5;&#x53CA;&#x6709;&#x6548;&#x5730;&#x4F7F;&#x7528;&#x5F02;&#x5E38;&#x7684;&#x6280;&#x672F;&#x5C06;&#x5728;11.12&#x8282;&#x3001;8.3&#x8282;&#x548C;&#x7B2C;14&#x7AE0;&#x8BA8;&#x8BBA;&#x3002;&#x4F46;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x5B9A;&#x4E49;&#x5BF9;&#x4E8E;&#x672C;&#x4E66;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x4F8B;&#x5B50;&#x90FD;&#x8DB3;&#x591F;&#xFF1A;</p>
-<pre><code class="lang-javascript">    template&lt;class T&gt; class Vec : public vector&lt;T&gt;
+<p>&#x8FD9;&#x4E2A;&#x521D;&#x59CB;&#x5316;&#x5F88;&#x53EF;&#x80FD;&#x5C06;&#x67D0;&#x4E2A;&#x968F;&#x673A;&#x7684;&#x503C;&#x8D4B;&#x7ED9; <code>i</code>&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;&#x8FD9;&#x5F53;&#x7136;&#x4E0D;&#x662F;&#x4EBA;&#x4EEC;&#x6240;&#x5E0C;&#x671B;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x5728;&#x4E0B;&#x9762;&#x5404;&#x7AE0;&#x91CC;&#x8981;&#x4F7F;&#x7528; <code>vector</code> &#x7684;&#x4E00;&#x4E2A;&#x7ECF;&#x8FC7;&#x7B80;&#x5355;&#x4FEE;&#x8BA2;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5B83;&#x5E26;&#x6709;&#x533A;&#x95F4;&#x8303;&#x56F4;&#x68C0;&#x67E5;&#xFF0C;&#x79F0;&#x4E3A; <code>Vec</code>&#x3002;&#x4E00;&#x4E2A; <code>Vec</code> &#x5C31;&#x50CF;&#x662F;&#x4E00;&#x4E2A; <code>vector</code>&#xFF0C;&#x53EA;&#x662F;&#x5F53;&#x67D0;&#x4E2A;&#x4E0B;&#x6807;&#x8D85;&#x51FA;&#x4E86;&#x533A;&#x95F4;&#x8303;&#x56F4;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A; <code>out_of_range</code> &#x7684;&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x5B9E;&#x73B0;&#x50CF; <code>Vec</code> &#x8FD9;&#x6837;&#x7684;&#x7C7B;&#x578B;&#x4EE5;&#x53CA;&#x6709;&#x6548;&#x5730;&#x4F7F;&#x7528;&#x5F02;&#x5E38;&#x7684;&#x6280;&#x672F;&#x5C06;&#x5728;11.12&#x8282;&#x3001;8.3&#x8282;&#x548C;&#x7B2C;14&#x7AE0;&#x8BA8;&#x8BBA;&#x3002;&#x4F46;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x5B9A;&#x4E49;&#x5BF9;&#x4E8E;&#x672C;&#x4E66;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x4F8B;&#x5B50;&#x90FD;&#x8DB3;&#x591F;&#xFF1A;</p>
+<pre><code class="lang-javascript">    template&lt;class T&gt; class Vec : public std::vector&lt;T&gt;
     {
     public:
         Vec() : vector&lt;T&gt;() {}
@@ -8808,8 +8808,8 @@
         const T&amp; operator[](int i) const { return at(i); } // &#x68C0;&#x67E5;&#x533A;&#x95F4;&#x8303;&#x56F4;
     };
 </code></pre>
-<p>&#x8FD9;&#x91CC;&#x7684;at()&#x64CD;&#x4F5C;&#x662F;vector&#x7684;&#x4E0B;&#x6807;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x7684;&#x53C2;&#x6570;&#x8D85;&#x8FC7;&#x4E86;&#x8BE5;vector&#x7684;&#x533A;&#x95F4;&#x8303;&#x56F4;&#xFF0C;at()&#x5C31;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;out_of_range&#x7C7B;&#x578B;&#x7684;&#x5F02;&#x5E38;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x73B0;&#x5728;&#x56DE;&#x5230;&#x4FDD;&#x5B58;&#x540D;&#x5B57;&#x548C;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x7528;&#x4E00;&#x4E2A;Vec&#x6765;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x8D85;&#x51FA;&#x8303;&#x56F4;&#x7684;&#x8BBF;&#x95EE;&#x90FD;&#x5C06;&#x88AB;&#x6293;&#x4F4F;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
+<p>&#x8FD9;&#x91CC;&#x7684; <code>at()</code> &#x64CD;&#x4F5C;&#x662F; <code>vector</code> &#x7684;&#x4E0B;&#x6807;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x7684;&#x53C2;&#x6570;&#x8D85;&#x8FC7;&#x4E86;&#x8BE5; <code>vector</code> &#x7684;&#x533A;&#x95F4;&#x8303;&#x56F4;&#xFF0C;<code>at()</code> &#x5C31;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A; <code>out_of_range</code> &#x7C7B;&#x578B;&#x7684;&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x56DE;&#x5230;&#x4FDD;&#x5B58;&#x540D;&#x5B57;&#x548C;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x7528;&#x4E00;&#x4E2A; <code>Vec</code> &#x6765;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x8D85;&#x51FA;&#x8303;&#x56F4;&#x7684;&#x8BBF;&#x95EE;&#x90FD;&#x5C06;&#x88AB;&#x6293;&#x4F4F;&#x3002;&#x4F8B;&#x5982;&#xFF0C;</p>
 <pre><code class="lang-javascript">    Vec&lt;Entry&gt; phone_book(<span class="hljs-number">1000</span>);
     <span class="hljs-keyword">void</span> print_entry(int i)    <span class="hljs-comment">// &#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528;&#xFF0C;&#x5B8C;&#x5168;&#x50CF;&#x7528;vector</span>
     {
@@ -8822,13 +8822,13 @@
         <span class="hljs-keyword">try</span> {
             <span class="hljs-keyword">for</span>(int i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10000</span>; i++) print_entry(i);
         }
-        cathc() {
+        <span class="hljs-keyword">catch</span>(out_of_range) {
             cout &lt;&lt; <span class="hljs-string">&quot;range error\n&quot;</span>;
         }
     }
 </code></pre>
-<p>&#x5728;&#x4F01;&#x56FE;&#x7528;i=1000&#x8BBF;&#x95EE;phone_book[i]&#x65F6;&#xFF0C;&#x5F02;&#x5E38;&#x5C06;&#x88AB;&#x629B;&#x51FA;&#xFF0C;&#x800C;&#x540E;&#x88AB;&#x6355;&#x6349;&#x3002;</p>
-<p>&#x2003;&#x2003;&#x5982;&#x679C;&#x7528;&#x6237;&#x672A;&#x6355;&#x6349;&#x8FD9;&#x7C7B;&#x5F02;&#x5E38;&#xFF0C;&#x7A0B;&#x5E8F;&#x5C31;&#x5C06;&#x6309;&#x7167;&#x4E00;&#x79CD;&#x5B9A;&#x4E49;&#x826F;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#x7EC8;&#x6B62;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x7EE7;&#x7EED;&#x4E0B;&#x53BB;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x4EE5;&#x67D0;&#x79CD;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x5F0F;&#x5931;&#x8D25;&#x3002;&#x4F7F;&#x5F02;&#x5E38;&#x6240;&#x9020;&#x6210;&#x7684;&#x5947;&#x602A;&#x73B0;&#x8C61;&#x6700;&#x5C0F;&#x5316;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x8BA9;main()&#x91C7;&#x7528;&#x4E00;&#x4E2A;try-&#x5757;&#x4F5C;&#x4E3A;&#x4F53;&#xFF1A;</p>
+<p>&#x5728;&#x4F01;&#x56FE;&#x7528; <code>i=1000</code> &#x8BBF;&#x95EE; <code>phone_book[i]</code> &#x65F6;&#xFF0C;&#x5F02;&#x5E38;&#x5C06;&#x88AB;&#x629B;&#x51FA;&#xFF0C;&#x800C;&#x540E;&#x88AB;&#x6355;&#x6349;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x7528;&#x6237;&#x672A;&#x6355;&#x6349;&#x8FD9;&#x7C7B;&#x5F02;&#x5E38;&#xFF0C;&#x7A0B;&#x5E8F;&#x5C31;&#x5C06;&#x6309;&#x7167;&#x4E00;&#x79CD;&#x5B9A;&#x4E49;&#x826F;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#x7EC8;&#x6B62;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x7EE7;&#x7EED;&#x4E0B;&#x53BB;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x4EE5;&#x67D0;&#x79CD;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x5F0F;&#x5931;&#x8D25;&#x3002;&#x4F7F;&#x5F02;&#x5E38;&#x6240;&#x9020;&#x6210;&#x7684;&#x5947;&#x602A;&#x73B0;&#x8C61;&#x6700;&#x5C0F;&#x5316;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x8BA9; <code>main()</code> &#x91C7;&#x7528;&#x4E00;&#x4E2A; <code>try-</code> &#x5757;&#x4F5C;&#x4E3A;&#x4F53;&#xFF1A;</p>
 <pre><code class="lang-javascript">    int main()
     <span class="hljs-keyword">try</span> {
         <span class="hljs-comment">// &#x4F60;&#x7684;&#x4EE3;&#x7801;</span>
@@ -8840,7 +8840,7 @@
         cerr &lt;&lt; <span class="hljs-string">&quot;unknown exception thrown\n&quot;</span>;
     }
 </code></pre>
-<p>&#x5728;&#x8FD9;&#x91CC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5668;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x672A;&#x80FD;&#x6355;&#x6349;&#x67D0;&#x4E9B;&#x5F02;&#x5E38;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x5728;&#x6807;&#x51C6;&#x7684;&#x9519;&#x8BEF;&#x8BCA;&#x65AD;&#x8F93;&#x51FA;&#x6D41;cerr&#xFF08;21.2.1&#x8282;&#xFF09;&#x6253;&#x5370;&#x51FA;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x5668;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x672A;&#x80FD;&#x6355;&#x6349;&#x67D0;&#x4E9B;&#x5F02;&#x5E38;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x5728;&#x6807;&#x51C6;&#x7684;&#x9519;&#x8BEF;&#x8BCA;&#x65AD;&#x8F93;&#x51FA;&#x6D41; <code>cerr</code>&#xFF08;21.2.1&#x8282;&#xFF09;&#x6253;&#x5370;&#x51FA;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
 <p>&#x1F51A;</p>
 
                                 
@@ -8869,7 +8869,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.7.2 范围检查","level":"1.4.7.2","depth":3,"next":{"title":"3.7.3 表---list","level":"1.4.7.3","depth":3,"path":"第3章 标准库概览/3.7.3-list.md","ref":"第3章 标准库概览/3.7.3-list.md","articles":[]},"previous":{"title":"3.7.1 向量---vector","level":"1.4.7.1","depth":3,"path":"第3章 标准库概览/3.7.1-vector.md","ref":"第3章 标准库概览/3.7.1-vector.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第3章 标准库概览/3.7.2.md","mtime":"2017-01-25T14:59:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-05T15:42:32.706Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.7.2 范围检查","level":"1.4.7.2","depth":3,"next":{"title":"3.7.3 表---list","level":"1.4.7.3","depth":3,"path":"第3章 标准库概览/3.7.3-list.md","ref":"第3章 标准库概览/3.7.3-list.md","articles":[]},"previous":{"title":"3.7.1 向量---vector","level":"1.4.7.1","depth":3,"path":"第3章 标准库概览/3.7.1-vector.md","ref":"第3章 标准库概览/3.7.1-vector.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","dirction":"沈军","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"C++程序设计语言","language":"zh-cn","gitbook":">=2.0.0","description":"天道酬勤"},"file":{"path":"第3章 标准库概览/3.7.2.md","mtime":"2017-02-08T20:18:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-09T01:16:52.508Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
